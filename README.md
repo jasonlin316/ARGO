@@ -1,4 +1,4 @@
-# Accelerating GNN with PyTorch DDP
+# DDP GNN
 
 ## Installation
 
