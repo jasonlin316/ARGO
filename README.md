@@ -5,7 +5,7 @@
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/jasonlin316/CS576_final_project_S23.git
+git clone https://github.com/jasonlin316/DDP_GNN.git
 ```
 
 2. Navigate to the project directory:
