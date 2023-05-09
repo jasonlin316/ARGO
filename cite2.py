@@ -169,7 +169,7 @@ def train(rank, size, args, device, g, reverse_eids, seed_edges, model):
     
     opt = torch.optim.Adam(model.parameters(), lr=0.0005)
     
-    for epoch in range(3):
+    for epoch in range(5):
         start = time.time()
         model.train()
         total_loss = 0
@@ -244,9 +244,9 @@ if __name__ == '__main__':
         p.join()
     end = time.time()
     exe_time = end-start
-    msg = str(size) + " process: " + str(exe_time) + " sec"
+    msg = str(size) + " process: " + str(exe_time/5) + " sec"
 
-    with open("citation.txt", "w") as text_file:
+    with open("citation.txt", "a") as text_file:
         text_file.write(msg)
 
     print("program finished.")
