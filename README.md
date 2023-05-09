@@ -34,9 +34,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Test Result
+6. Run the experiments
 
+```shell
+bash run.sh
+```
 
-
-## Obtain Output
+7. Obtain the outputs: products.txt and citation.txt 
 
