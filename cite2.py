@@ -164,13 +164,12 @@ def train(rank, size, args, device, g, reverse_eids, seed_edges, model):
 
     dataloader = DataLoader(
         g, seed_edges, sampler,
-        device=device, batch_size=2048/size, shuffle=True, use_ddp = True,
+        device=device, batch_size=(2048//size), shuffle=True, use_ddp = True,
         drop_last=False, num_workers=4, use_uva=use_uva)
     
     opt = torch.optim.Adam(model.parameters(), lr=0.0005)
     
     for epoch in range(5):
-        start = time.time()
         model.train()
         total_loss = 0
         with dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
@@ -187,8 +186,8 @@ def train(rank, size, args, device, g, reverse_eids, seed_edges, model):
                 opt.step()
                 total_loss += loss.item()
                 if (it+1) == 1000: break
-        end = time.time()
-        print(end - start, "sec")
+    
+       
         
 
 if __name__ == '__main__':
@@ -244,7 +243,7 @@ if __name__ == '__main__':
         p.join()
     end = time.time()
     exe_time = end-start
-    msg = str(size) + " process: " + str(exe_time/5) + " sec"
+    msg = str(size) + " process: " + str(exe_time/5) + " sec\n"
 
     with open("citation.txt", "a") as text_file:
         text_file.write(msg)

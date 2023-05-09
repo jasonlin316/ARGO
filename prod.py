@@ -247,7 +247,7 @@ if __name__ == "__main__":
     end = time.time()
     exe_time = end - start
 
-    msg = str(size) + " process: " + str(exe_time/10) + " sec"
+    msg = str(size) + " process: " + str(exe_time/10) + " sec\n"
     with open("products.txt", "a") as text_file:
         text_file.write(msg)
 
