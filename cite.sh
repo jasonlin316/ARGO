@@ -1,4 +1,4 @@
 #!/bin/bash
-torchrun cite2.py --size 1
+python cite2_single.py
 torchrun cite2.py --size 2
 torchrun cite2.py --size 4
