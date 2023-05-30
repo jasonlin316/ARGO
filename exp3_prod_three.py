@@ -124,11 +124,11 @@ def train(rank, size, args, device, g, dataset, model):
     
     elif size == 2:
         if rank == 0:
-            load_core = list(range(0,4))
-            comp_core = list(range(4,n//2))
+            load_core = list(range(0,8))
+            comp_core = list(range(8,n//2))
         else:
-            load_core = list(range(n//2,n//2+4))
-            comp_core = list(range(n//2+4,n))
+            load_core = list(range(n//2,n//2+8))
+            comp_core = list(range(n//2+8,n))
     
     elif size == 4:
         if rank == 0:
@@ -184,6 +184,7 @@ def train(rank, size, args, device, g, dataset, model):
         with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
             with train_dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
                 for it, (input_nodes, output_nodes, blocks) in enumerate(train_dataloader):
+                    if (it+1) == 100: break
                     x = blocks[0].srcdata["feat"]
                     y = blocks[-1].dstdata["label"]
                     y_hat = model(blocks, x)
@@ -193,6 +194,14 @@ def train(rank, size, args, device, g, dataset, model):
                     opt.step()
                     total_loss += loss.item()
         prof.export_chrome_trace('product_three_layer.json')
+        # if rank == 0:
+        #     prof.export_chrome_trace('product_three_layer_0.json')
+        # elif rank == 1:
+        #     prof.export_chrome_trace('product_three_layer_1.json')
+        # elif rank == 2:
+        #     prof.export_chrome_trace('product_three_layer_2.json')
+        # else:
+        #     prof.export_chrome_trace('product_three_layer_3.json')
 
 
 if __name__ == "__main__":
