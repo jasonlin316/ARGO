@@ -103,7 +103,7 @@ def train(args, device, g, dataset, model):
     use_uva = (args.mode == 'mixed')
     
     train_dataloader = DataLoader(g, train_idx, sampler, device=device,
-                                  batch_size=1024, shuffle=True,
+                                  batch_size=4096, shuffle=True,
                                   drop_last=False, num_workers = 4,
                                   use_uva=use_uva)
 
@@ -119,6 +119,7 @@ def train(args, device, g, dataset, model):
         total_loss = 0
         with train_dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
             for it, (input_nodes, output_nodes, blocks) in enumerate(train_dataloader):
+                if (it+1) == 200: break
                 x = blocks[0].srcdata['feat']
                 y = blocks[-1].dstdata['label']
                 y_hat = model(blocks, x)
@@ -163,25 +164,37 @@ if __name__ == '__main__':
     print('Training...')
     comp_core = list(range(4,8))
     start = time.time()
-    train(args, device, g, dataset, model)
-    end = time.time()
+    with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
+        train(args, device, g, dataset, model)
+        end = time.time()
+    prof.export_chrome_trace('prod_four_thread.json')
+    
     print("Epoch time using 4 threads: ", (end-start), "sec")
 
     comp_core = list(range(4,12))
     start = time.time()
-    train(args, device, g, dataset, model)
-    end = time.time()
+    with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
+        train(args, device, g, dataset, model)
+        end = time.time()
+    prof.export_chrome_trace('prod_eight_thread.json')
+    
     print("Epoch time using 8 threads: ", (end-start), "sec")
 
     comp_core = list(range(4,20))
     start = time.time()
-    train(args, device, g, dataset, model)
-    end = time.time()
+    with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
+        train(args, device, g, dataset, model)
+        end = time.time()
+    prof.export_chrome_trace('prod_sixteen_thread.json')
+    
     print("Epoch time using 16 threads: ", (end-start), "sec")
     
     comp_core = list(range(4,36))
     start = time.time()
-    train(args, device, g, dataset, model)
-    end = time.time()
+    with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
+        train(args, device, g, dataset, model)
+        end = time.time()
+    prof.export_chrome_trace('prod_thirtytwo_thread.json')
+    
     print("Epoch time using 32 threads: ", (end-start), "sec")
    
