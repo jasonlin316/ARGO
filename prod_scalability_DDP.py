@@ -183,8 +183,9 @@ def train(rank, size, args, device, g, dataset, model):
         end = time.time()
         exe_time = end - start
         msg = "4 cores: " + str(exe_time/10) + " sec\n"
-        with open("DGL_DDP_products.txt", "a") as text_file:
-            text_file.write(msg)
+        if rank == 0:
+            with open("DGL_DDP_products.txt", "a") as text_file:
+                text_file.write(msg)
     if n > 16+8:
         cores = 2
         if rank == 0:
@@ -216,8 +217,9 @@ def train(rank, size, args, device, g, dataset, model):
         end = time.time()
         exe_time = end - start
         msg = "8 cores: " + str(exe_time/10) + " sec\n"
-        with open("DGL_DDP_products.txt", "a") as text_file:
-            text_file.write(msg)
+        if rank == 0:
+            with open("DGL_DDP_products.txt", "a") as text_file:
+                text_file.write(msg)
     if n > 16+16:
         cores = 4
         if rank == 0:
@@ -249,8 +251,9 @@ def train(rank, size, args, device, g, dataset, model):
         end = time.time()
         exe_time = end - start
         msg = "16 cores: " + str(exe_time/10) + " sec\n"
-        with open("DGL_DDP_products.txt", "a") as text_file:
-            text_file.write(msg)
+        if rank == 0:
+            with open("DGL_DDP_products.txt", "a") as text_file:
+                text_file.write(msg)
     if n > 16+32:
         cores = 8
         if rank == 0:
@@ -282,8 +285,9 @@ def train(rank, size, args, device, g, dataset, model):
         end = time.time()
         exe_time = end - start
         msg = "32 cores: " + str(exe_time/10) + " sec\n"
-        with open("DGL_DDP_products.txt", "a") as text_file:
-            text_file.write(msg)
+        if rank == 0:
+            with open("DGL_DDP_products.txt", "a") as text_file:
+                text_file.write(msg)
     if n > 16+64:
         cores = 16
         if rank == 0:
@@ -315,8 +319,9 @@ def train(rank, size, args, device, g, dataset, model):
         end = time.time()
         exe_time = end - start
         msg = "64 cores: " + str(exe_time/10) + " sec\n"
-        with open("DGL_DDP_products.txt", "a") as text_file:
-            text_file.write(msg)
+        if rank == 0:
+            with open("DGL_DDP_products.txt", "a") as text_file:
+                text_file.write(msg)
     if n > 16+128:
         cores = 32
         if rank == 0:
@@ -380,8 +385,9 @@ def train(rank, size, args, device, g, dataset, model):
     end = time.time()
     exe_time = end - start
     msg = str(n-16) + " cores: " + str(exe_time/10) + " sec\n"
-    with open("DGL_DDP_products.txt", "a") as text_file:
-        text_file.write(msg)
+    if rank == 0:
+        with open("DGL_DDP_products.txt", "a") as text_file:
+            text_file.write(msg)
     
 
 
