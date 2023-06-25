@@ -126,32 +126,6 @@ def train(rank, size, args, device, g, reverse_eids, seed_edges, model, cores):
     model = DistributedDataParallel(model)
     n = psutil.cpu_count(logical = False)
 
-    if size == 1:
-        load_core = list(range(0,4))
-        comp_core = list(range(4,n))
-    
-    elif size == 2:
-        if rank == 0:
-            load_core = list(range(0,4))
-            comp_core = list(range(4,n//2))
-        else:
-            load_core = list(range(n//2,n//2+4))
-            comp_core = list(range(n//2+4,n))
-    
-    elif size == 4:
-        if rank == 0:
-            load_core = list(range(0,4))
-            comp_core = list(range(4,4+cores))
-        elif rank == 1:
-            load_core = list(range(n//4,n//4+4))
-            comp_core = list(range(n//4+4,n//4+4+cores))
-        elif rank == 2:
-            load_core = list(range(n//2,n//2+4))
-            comp_core = list(range(n//2+4,n//2+4+cores))
-        else:
-            load_core = list(range(n//4*3,n//4*3+4))
-            comp_core = list(range(n//4*3+4,n//4*3+4+cores))
-
     if args.algo == 'mini':
         sampler = NeighborSampler([15,10,5], prefetch_node_feats=['feat'])
     else:
@@ -169,10 +143,24 @@ def train(rank, size, args, device, g, reverse_eids, seed_edges, model, cores):
     
     opt = torch.optim.Adam(model.parameters(), lr=0.0005)
     
-    for epoch in range(5):
-        model.train()
-        total_loss = 0
-        with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
+    if n > 16+4:
+        cores = 1
+        if rank == 0:
+            load_core = list(range(0,4))
+            comp_core = list(range(4,4+cores))
+        elif rank == 1:
+            load_core = list(range(n//4,n//4+4))
+            comp_core = list(range(n//4+4,n//4+4+cores))
+        elif rank == 2:
+            load_core = list(range(n//2,n//2+4))
+            comp_core = list(range(n//2+4,n//2+4+cores))
+        else:
+            load_core = list(range(n//4*3,n//4*3+4))
+            comp_core = list(range(n//4*3+4,n//4*3+4+cores))
+        start = time.time()
+        for epoch in range(5):
+            model.train()
+            total_loss = 0
             with dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
                 for it, (input_nodes, pair_graph, neg_pair_graph, blocks) in enumerate(dataloader):
                     x = blocks[0].srcdata['feat']
@@ -186,9 +174,234 @@ def train(rank, size, args, device, g, reverse_eids, seed_edges, model, cores):
                     loss.backward()
                     opt.step()
                     total_loss += loss.item()
-                    if (it+1) == 1000: break
-        prof.export_chrome_trace('citation_three_layer.json')
-    
+                    if (it+1) == 500: break
+        end = time.time()
+        exe_time = end - start
+        msg = "4 cores: " + str(exe_time/5) + " sec\n"
+        with open("DGL_DDP_citation.txt", "a") as text_file:
+            text_file.write(msg)
+    if n > 16+8:
+        cores = 2
+        if rank == 0:
+            load_core = list(range(0,4))
+            comp_core = list(range(4,4+cores))
+        elif rank == 1:
+            load_core = list(range(n//4,n//4+4))
+            comp_core = list(range(n//4+4,n//4+4+cores))
+        elif rank == 2:
+            load_core = list(range(n//2,n//2+4))
+            comp_core = list(range(n//2+4,n//2+4+cores))
+        else:
+            load_core = list(range(n//4*3,n//4*3+4))
+            comp_core = list(range(n//4*3+4,n//4*3+4+cores))
+        start = time.time()
+        for epoch in range(5):
+            model.train()
+            total_loss = 0
+            with dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
+                for it, (input_nodes, pair_graph, neg_pair_graph, blocks) in enumerate(dataloader):
+                    x = blocks[0].srcdata['feat']
+                    pos_score, neg_score = model(pair_graph, neg_pair_graph, blocks, x)
+                    score = torch.cat([pos_score, neg_score])
+                    pos_label = torch.ones_like(pos_score)
+                    neg_label = torch.zeros_like(neg_score)
+                    labels = torch.cat([pos_label, neg_label])
+                    loss = F.binary_cross_entropy_with_logits(score, labels)
+                    opt.zero_grad()
+                    loss.backward()
+                    opt.step()
+                    total_loss += loss.item()
+                    if (it+1) == 500: break
+        end = time.time()
+        exe_time = end - start
+        msg = "8 cores: " + str(exe_time/5) + " sec\n"
+        with open("DGL_DDP_citation.txt", "a") as text_file:
+            text_file.write(msg)
+    if n > 16+16:
+        cores = 4
+        if rank == 0:
+            load_core = list(range(0,4))
+            comp_core = list(range(4,4+cores))
+        elif rank == 1:
+            load_core = list(range(n//4,n//4+4))
+            comp_core = list(range(n//4+4,n//4+4+cores))
+        elif rank == 2:
+            load_core = list(range(n//2,n//2+4))
+            comp_core = list(range(n//2+4,n//2+4+cores))
+        else:
+            load_core = list(range(n//4*3,n//4*3+4))
+            comp_core = list(range(n//4*3+4,n//4*3+4+cores))
+        start = time.time()
+        for epoch in range(5):
+            model.train()
+            total_loss = 0
+            with dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
+                for it, (input_nodes, pair_graph, neg_pair_graph, blocks) in enumerate(dataloader):
+                    x = blocks[0].srcdata['feat']
+                    pos_score, neg_score = model(pair_graph, neg_pair_graph, blocks, x)
+                    score = torch.cat([pos_score, neg_score])
+                    pos_label = torch.ones_like(pos_score)
+                    neg_label = torch.zeros_like(neg_score)
+                    labels = torch.cat([pos_label, neg_label])
+                    loss = F.binary_cross_entropy_with_logits(score, labels)
+                    opt.zero_grad()
+                    loss.backward()
+                    opt.step()
+                    total_loss += loss.item()
+                    if (it+1) == 500: break
+        end = time.time()
+        exe_time = end - start
+        msg = "16 cores: " + str(exe_time/5) + " sec\n"
+        with open("DGL_DDP_citation.txt", "a") as text_file:
+            text_file.write(msg)
+    if n > 16+32:
+        cores = 8
+        if rank == 0:
+            load_core = list(range(0,4))
+            comp_core = list(range(4,4+cores))
+        elif rank == 1:
+            load_core = list(range(n//4,n//4+4))
+            comp_core = list(range(n//4+4,n//4+4+cores))
+        elif rank == 2:
+            load_core = list(range(n//2,n//2+4))
+            comp_core = list(range(n//2+4,n//2+4+cores))
+        else:
+            load_core = list(range(n//4*3,n//4*3+4))
+            comp_core = list(range(n//4*3+4,n//4*3+4+cores))
+        start = time.time()
+        for epoch in range(5):
+            model.train()
+            total_loss = 0
+            with dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
+                for it, (input_nodes, pair_graph, neg_pair_graph, blocks) in enumerate(dataloader):
+                    x = blocks[0].srcdata['feat']
+                    pos_score, neg_score = model(pair_graph, neg_pair_graph, blocks, x)
+                    score = torch.cat([pos_score, neg_score])
+                    pos_label = torch.ones_like(pos_score)
+                    neg_label = torch.zeros_like(neg_score)
+                    labels = torch.cat([pos_label, neg_label])
+                    loss = F.binary_cross_entropy_with_logits(score, labels)
+                    opt.zero_grad()
+                    loss.backward()
+                    opt.step()
+                    total_loss += loss.item()
+                    if (it+1) == 500: break
+        end = time.time()
+        exe_time = end - start
+        msg = "32 cores: " + str(exe_time/5) + " sec\n"
+        with open("DGL_DDP_citation.txt", "a") as text_file:
+            text_file.write(msg)
+    if n > 16+64:
+        cores = 16
+        if rank == 0:
+            load_core = list(range(0,4))
+            comp_core = list(range(4,4+cores))
+        elif rank == 1:
+            load_core = list(range(n//4,n//4+4))
+            comp_core = list(range(n//4+4,n//4+4+cores))
+        elif rank == 2:
+            load_core = list(range(n//2,n//2+4))
+            comp_core = list(range(n//2+4,n//2+4+cores))
+        else:
+            load_core = list(range(n//4*3,n//4*3+4))
+            comp_core = list(range(n//4*3+4,n//4*3+4+cores))
+        start = time.time()
+        for epoch in range(5):
+            model.train()
+            total_loss = 0
+            with dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
+                for it, (input_nodes, pair_graph, neg_pair_graph, blocks) in enumerate(dataloader):
+                    x = blocks[0].srcdata['feat']
+                    pos_score, neg_score = model(pair_graph, neg_pair_graph, blocks, x)
+                    score = torch.cat([pos_score, neg_score])
+                    pos_label = torch.ones_like(pos_score)
+                    neg_label = torch.zeros_like(neg_score)
+                    labels = torch.cat([pos_label, neg_label])
+                    loss = F.binary_cross_entropy_with_logits(score, labels)
+                    opt.zero_grad()
+                    loss.backward()
+                    opt.step()
+                    total_loss += loss.item()
+                    if (it+1) == 500: break
+        end = time.time()
+        exe_time = end - start
+        msg = "64 cores: " + str(exe_time/5) + " sec\n"
+        with open("DGL_DDP_citation.txt", "a") as text_file:
+            text_file.write(msg)
+    if n > 16+128:
+        cores = 32
+        if rank == 0:
+            load_core = list(range(0,4))
+            comp_core = list(range(4,4+cores))
+        elif rank == 1:
+            load_core = list(range(n//4,n//4+4))
+            comp_core = list(range(n//4+4,n//4+4+cores))
+        elif rank == 2:
+            load_core = list(range(n//2,n//2+4))
+            comp_core = list(range(n//2+4,n//2+4+cores))
+        else:
+            load_core = list(range(n//4*3,n//4*3+4))
+            comp_core = list(range(n//4*3+4,n//4*3+4+cores))
+        start = time.time()
+        for epoch in range(5):
+            model.train()
+            total_loss = 0
+            with dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
+                for it, (input_nodes, pair_graph, neg_pair_graph, blocks) in enumerate(dataloader):
+                    x = blocks[0].srcdata['feat']
+                    pos_score, neg_score = model(pair_graph, neg_pair_graph, blocks, x)
+                    score = torch.cat([pos_score, neg_score])
+                    pos_label = torch.ones_like(pos_score)
+                    neg_label = torch.zeros_like(neg_score)
+                    labels = torch.cat([pos_label, neg_label])
+                    loss = F.binary_cross_entropy_with_logits(score, labels)
+                    opt.zero_grad()
+                    loss.backward()
+                    opt.step()
+                    total_loss += loss.item()
+                    if (it+1) == 500: break
+        end = time.time()
+        exe_time = end - start
+        msg = "128 cores: " + str(exe_time/5) + " sec\n"
+        with open("DGL_DDP_citation.txt", "a") as text_file:
+            text_file.write(msg)
+    cores = (n-16)//4
+    if rank == 0:
+        load_core = list(range(0,4))
+        comp_core = list(range(4,4+cores))
+    elif rank == 1:
+        load_core = list(range(n//4,n//4+4))
+        comp_core = list(range(n//4+4,n//4+4+cores))
+    elif rank == 2:
+        load_core = list(range(n//2,n//2+4))
+        comp_core = list(range(n//2+4,n//2+4+cores))
+    else:
+        load_core = list(range(n//4*3,n//4*3+4))
+        comp_core = list(range(n//4*3+4,n//4*3+4+cores))
+    start = time.time()
+    for epoch in range(5):
+        model.train()
+        total_loss = 0
+        with dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
+            for it, (input_nodes, pair_graph, neg_pair_graph, blocks) in enumerate(dataloader):
+                x = blocks[0].srcdata['feat']
+                pos_score, neg_score = model(pair_graph, neg_pair_graph, blocks, x)
+                score = torch.cat([pos_score, neg_score])
+                pos_label = torch.ones_like(pos_score)
+                neg_label = torch.zeros_like(neg_score)
+                labels = torch.cat([pos_label, neg_label])
+                loss = F.binary_cross_entropy_with_logits(score, labels)
+                opt.zero_grad()
+                loss.backward()
+                opt.step()
+                total_loss += loss.item()
+                if (it+1) == 500: break
+    end = time.time()
+    exe_time = end - start
+    msg = str(n-16) + " cores: " + str(exe_time/5) + " sec\n"
+    with open("DGL_DDP_citation.txt", "a") as text_file:
+        text_file.write(msg)
+
        
         
 
@@ -237,125 +450,15 @@ if __name__ == '__main__':
     exe_time = 0
     
     n = psutil.cpu_count(logical = False)
-    if n >= 16+4:
-        cores = 1
-        mp.set_start_method('fork')
-        start = time.time()
-        for rank in range(size):
-            p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model, cores))
-            p.start()
-            processes.append(p)
-        for p in processes:
-            p.join()
-        end = time.time()
-        exe_time = end - start
-        msg = "4 cores: " + str(exe_time/5) + " sec\n"
-        with open("DGL_DDP_citation.txt", "a") as text_file:
-            text_file.write(msg)
-    if n >= 16+8:
-        cores = 2
-        mp.set_start_method('fork')
-        start = time.time()
-        for rank in range(size):
-            p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model, cores))
-            p.start()
-            processes.append(p)
-        for p in processes:
-            p.join()
-        end = time.time()
-        exe_time = end - start
-        msg = "8 cores: " + str(exe_time/5) + " sec\n"
-        with open("DGL_DDP_citation.txt", "a") as text_file:
-            text_file.write(msg)
-    if n >= 16+16:
-        cores = 4
-        mp.set_start_method('fork')
-        start = time.time()
-        for rank in range(size):
-            p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model, cores))
-            p.start()
-            processes.append(p)
-        for p in processes:
-            p.join()
-        end = time.time()
-        exe_time = end - start
-        msg = "16 cores: " + str(exe_time/5) + " sec\n"
-        with open("DGL_DDP_citation.txt", "a") as text_file:
-            text_file.write(msg)
-    if n >= 16+32:
-        cores = 8
-        mp.set_start_method('fork')
-        start = time.time()
-        for rank in range(size):
-            p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model, cores))
-            p.start()
-            processes.append(p)
-        for p in processes:
-            p.join()
-        end = time.time()
-        exe_time = end - start
-        msg = "32 cores: " + str(exe_time/5) + " sec\n"
-        with open("DGL_DDP_citation.txt", "a") as text_file:
-            text_file.write(msg)
-    if n >= 16+64:
-        cores = 16
-        mp.set_start_method('fork')
-        start = time.time()
-        for rank in range(size):
-            p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model, cores))
-            p.start()
-            processes.append(p)
-        for p in processes:
-            p.join()
-        end = time.time()
-        exe_time = end - start
-        msg = "64 cores: " + str(exe_time/5) + " sec\n"
-        with open("DGL_DDP_citation.txt", "a") as text_file:
-            text_file.write(msg)
-    if n >= 16+128:
-        cores = 32
-        mp.set_start_method('fork')
-        start = time.time()
-        for rank in range(size):
-            p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model, cores))
-            p.start()
-            processes.append(p)
-        for p in processes:
-            p.join()
-        end = time.time()
-        exe_time = end - start
-        msg = "128 cores: " + str(exe_time/5) + " sec\n"
-        with open("DGL_DDP_citation.txt", "a") as text_file:
-            text_file.write(msg)
-    if n >= 16+256:
-        cores = 64
-        mp.set_start_method('fork')
-        start = time.time()
-        for rank in range(size):
-            p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model, cores))
-            p.start()
-            processes.append(p)
-        for p in processes:
-            p.join()
-        end = time.time()
-        exe_time = end - start
-        msg = "256 cores: " + str(exe_time/5) + " sec\n"
-        with open("DGL_DDP_citation.txt", "a") as text_file:
-            text_file.write(msg)
-
-    cores = (n-16)//4
     mp.set_start_method('fork')
-    start = time.time()
+
     for rank in range(size):
         p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model, cores))
         p.start()
         processes.append(p)
     for p in processes:
         p.join()
-    end = time.time()
-    exe_time = end - start
-    msg = str(n-16) + " cores: " + str(exe_time/5) + " sec\n"
-    with open("DGL_DDP_citation.txt", "a") as text_file:
-        text_file.write(msg)
+
+    
    
     print("program finished.")
