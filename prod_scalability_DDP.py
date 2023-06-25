@@ -238,10 +238,10 @@ if __name__ == "__main__":
     processes = []
     n = psutil.cpu_count(logical = False)
 
-    mp.set_start_method('fork')
 
     if n >= 16+4:
         cores = 1
+        mp.set_start_method('fork')
         start = time.time()
         for rank in range(size):
             p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
@@ -256,6 +256,7 @@ if __name__ == "__main__":
             text_file.write(msg)
     if n >= 16+8:
         cores = 2
+        mp.set_start_method('fork')
         start = time.time()
         for rank in range(size):
             p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
@@ -270,6 +271,7 @@ if __name__ == "__main__":
             text_file.write(msg)
     if n >= 16+16:
         cores = 4
+        mp.set_start_method('fork')
         start = time.time()
         for rank in range(size):
             p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
@@ -284,6 +286,7 @@ if __name__ == "__main__":
             text_file.write(msg)
     if n >= 16+32:
         cores = 8
+        mp.set_start_method('fork')
         start = time.time()
         for rank in range(size):
             p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
@@ -298,6 +301,7 @@ if __name__ == "__main__":
             text_file.write(msg)
     if n >= 16+64:
         cores = 16
+        mp.set_start_method('fork')
         start = time.time()
         for rank in range(size):
             p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
@@ -312,6 +316,7 @@ if __name__ == "__main__":
             text_file.write(msg)
     if n >= 16+128:
         cores = 32
+        mp.set_start_method('fork')
         start = time.time()
         for rank in range(size):
             p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
@@ -326,6 +331,7 @@ if __name__ == "__main__":
             text_file.write(msg)
     if n >= 16+256:
         cores = 64
+        mp.set_start_method('fork')
         start = time.time()
         for rank in range(size):
             p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
@@ -340,6 +346,7 @@ if __name__ == "__main__":
             text_file.write(msg)
 
     cores = (n-16)//4
+    mp.set_start_method('fork')
     start = time.time()
     for rank in range(size):
         p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
