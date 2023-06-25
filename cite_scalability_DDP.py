@@ -119,7 +119,7 @@ def evaluate(device, graph, edge_split, model, batch_size):
             results.append(compute_mrr(model, evaluator, node_emb, src, dst, neg_dst, device))
     return results
 
-def train(rank, size, args, device, g, reverse_eids, seed_edges, model, cores):
+def train(rank, size, args, device, g, reverse_eids, seed_edges, model):
     # create sampler & dataloader
 
     dist.init_process_group('gloo', rank=rank, world_size=size)
