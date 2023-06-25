@@ -112,7 +112,7 @@ def layerwise_infer(device, graph, nid, model, batch_size):
         return MF.accuracy(pred, label)
 
 
-def train(rank, size, args, device, g, dataset, model):
+def train(rank, size, args, device, g, dataset, model, cores):
     # create sampler & dataloader
     dist.init_process_group('gloo', rank=rank, world_size=size)
     model = DistributedDataParallel(model)
@@ -133,16 +133,16 @@ def train(rank, size, args, device, g, dataset, model):
     elif size == 4:
         if rank == 0:
             load_core = list(range(0,4))
-            comp_core = list(range(4,n//4))
+            comp_core = list(range(4,4+cores))
         elif rank == 1:
             load_core = list(range(n//4,n//4+4))
-            comp_core = list(range(n//4+4,n//2))
+            comp_core = list(range(n//4+4,n//4+4+cores))
         elif rank == 2:
             load_core = list(range(n//2,n//2+4))
-            comp_core = list(range(n//2+4,n//4*3))
+            comp_core = list(range(n//2+4,n//2+4+cores))
         else:
             load_core = list(range(n//4*3,n//4*3+4))
-            comp_core = list(range(n//4*3+4,n))
+            comp_core = list(range(n//4*3+4,n//4*3+4+cores))
 
     train_idx = dataset.train_idx.to(device)
     val_idx = dataset.val_idx.to(device)
@@ -178,30 +178,20 @@ def train(rank, size, args, device, g, dataset, model):
 
     opt = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=5e-4)
     
-    for epoch in range(1):
+    for epoch in range(10):
         model.train()
         total_loss = 0
-        with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
-            with train_dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
-                for it, (input_nodes, output_nodes, blocks) in enumerate(train_dataloader):
-                    if (it+1) == 100: break
-                    x = blocks[0].srcdata["feat"]
-                    y = blocks[-1].dstdata["label"]
-                    y_hat = model(blocks, x)
-                    loss = F.cross_entropy(y_hat, y)
-                    opt.zero_grad()
-                    loss.backward()
-                    opt.step()
-                    total_loss += loss.item()
-        # prof.export_chrome_trace('product_three_layer.json')
-        if rank == 0:
-            prof.export_chrome_trace('product_three_layer_0.json')
-        elif rank == 1:
-            prof.export_chrome_trace('product_three_layer_1.json')
-        elif rank == 2:
-            prof.export_chrome_trace('product_three_layer_2.json')
-        else:
-            prof.export_chrome_trace('product_three_layer_3.json')
+        with train_dataloader.enable_cpu_affinity(loader_cores = load_core, compute_cores =  comp_core):
+            for it, (input_nodes, output_nodes, blocks) in enumerate(train_dataloader):
+                x = blocks[0].srcdata["feat"]
+                y = blocks[-1].dstdata["label"]
+                y_hat = model(blocks, x)
+                loss = F.cross_entropy(y_hat, y)
+                opt.zero_grad()
+                loss.backward()
+                opt.step()
+                total_loss += loss.item()
+        
 
 
 if __name__ == "__main__":
@@ -215,7 +205,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--process",
-        default= "1",
+        default= "4",
         choices=["1", "2", "4"],
     )
 
@@ -246,14 +236,122 @@ if __name__ == "__main__":
     master_port = '29500'
     
     processes = []
+    n = psutil.cpu_count(logical = False)
 
     mp.set_start_method('fork')
-    
+
+    if n >= 16+4:
+        cores = 1
+        start = time.time()
+        for rank in range(size):
+            p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
+            p.start()
+            processes.append(p)
+        for p in processes:
+            p.join()
+        end = time.time()
+        exe_time = end - start
+        msg = "4 cores: " + str(exe_time/10) + " sec\n"
+        with open("DGL_DDP_products.txt", "a") as text_file:
+            text_file.write(msg)
+    if n >= 16+8:
+        cores = 2
+        start = time.time()
+        for rank in range(size):
+            p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
+            p.start()
+            processes.append(p)
+        for p in processes:
+            p.join()
+        end = time.time()
+        exe_time = end - start
+        msg = "8 cores: " + str(exe_time/10) + " sec\n"
+        with open("DGL_DDP_products.txt", "a") as text_file:
+            text_file.write(msg)
+    if n >= 16+16:
+        cores = 4
+        start = time.time()
+        for rank in range(size):
+            p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
+            p.start()
+            processes.append(p)
+        for p in processes:
+            p.join()
+        end = time.time()
+        exe_time = end - start
+        msg = "16 cores: " + str(exe_time/10) + " sec\n"
+        with open("DGL_DDP_products.txt", "a") as text_file:
+            text_file.write(msg)
+    if n >= 16+32:
+        cores = 8
+        start = time.time()
+        for rank in range(size):
+            p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
+            p.start()
+            processes.append(p)
+        for p in processes:
+            p.join()
+        end = time.time()
+        exe_time = end - start
+        msg = "32 cores: " + str(exe_time/10) + " sec\n"
+        with open("DGL_DDP_products.txt", "a") as text_file:
+            text_file.write(msg)
+    if n >= 16+64:
+        cores = 16
+        start = time.time()
+        for rank in range(size):
+            p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
+            p.start()
+            processes.append(p)
+        for p in processes:
+            p.join()
+        end = time.time()
+        exe_time = end - start
+        msg = "64 cores: " + str(exe_time/10) + " sec\n"
+        with open("DGL_DDP_products.txt", "a") as text_file:
+            text_file.write(msg)
+    if n >= 16+128:
+        cores = 32
+        start = time.time()
+        for rank in range(size):
+            p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
+            p.start()
+            processes.append(p)
+        for p in processes:
+            p.join()
+        end = time.time()
+        exe_time = end - start
+        msg = "128 cores: " + str(exe_time/10) + " sec\n"
+        with open("DGL_DDP_products.txt", "a") as text_file:
+            text_file.write(msg)
+    if n >= 16+256:
+        cores = 64
+        start = time.time()
+        for rank in range(size):
+            p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
+            p.start()
+            processes.append(p)
+        for p in processes:
+            p.join()
+        end = time.time()
+        exe_time = end - start
+        msg = "256 cores: " + str(exe_time/10) + " sec\n"
+        with open("DGL_DDP_products.txt", "a") as text_file:
+            text_file.write(msg)
+
+    cores = (n-16)//4
+    start = time.time()
     for rank in range(size):
-        p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model))
+        p = dmp.Process(target=train, args=(rank, size, args, device, g, dataset, model, cores))
         p.start()
         processes.append(p)
     for p in processes:
         p.join()
+    end = time.time()
+    exe_time = end - start
+    msg = str(n-16) + " cores: " + str(exe_time/10) + " sec\n"
+    with open("DGL_DDP_products.txt", "a") as text_file:
+        text_file.write(msg)
+    
 
     print("program finished.")

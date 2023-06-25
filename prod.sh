@@ -1,4 +1,3 @@
 #!/bin/bash
-python prod_single.py
-torchrun prod.py --size 2
-torchrun prod.py --size 4
+python prod_scalability.py
+torchrun prod_scalability_DDP.py
