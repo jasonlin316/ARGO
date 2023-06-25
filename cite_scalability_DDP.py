@@ -447,13 +447,12 @@ if __name__ == '__main__':
     master_addr = '127.0.0.1'
     master_port = '29500'
     processes = []
-    exe_time = 0
     
     n = psutil.cpu_count(logical = False)
-    mp.set_start_method('fork')
 
+    mp.set_start_method('fork')
     for rank in range(size):
-        p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model, cores))
+        p = dmp.Process(target=train, args=(rank, size, args, device, g, reverse_eids, seed_edges, model))
         p.start()
         processes.append(p)
     for p in processes:
