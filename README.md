@@ -42,5 +42,11 @@ bash cite.sh
 ```
 Note: when running the program for the first time, the program will ask if you want to download the dataset; please enter "y" for the program to proceed.
 
-7. Obtain the outputs: products.txt and citation.txt 
+7. Obtain the four outputs:
+```shell
+DGL_products.txt
+DGL_DDP_products.txt
+DGL_citation.txt
+DGL_DDP_citation.txt
+```
 
