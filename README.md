@@ -11,27 +11,31 @@ git clone https://github.com/jasonlin316/DDP_GNN.git
 2. Navigate to the project directory:
 
 ```shell
-cd project-name/
+cd DDP_GNN
+```
+
+3. Download Anaconda and install
+```shell
+wget https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh
+bash Anaconda3-2023.03-Linux-x86_64.sh
 ```
 
 3. Create a virtual environment:
 
 ```shell
-python -m venv venv
+conda create -n myenv python=3.8
 ```
 
 4. Active the virtual environment:
 
--   On Unix or Linux
-
 ```shell
-source venv/bin/activate
+conda activate myenv
 ```
 
 5. Install the required packages:
 
 ```shell
-pip install -r requirements.txt
+conda install --file requirements.txt
 ```
 
 6. Run the experiments
