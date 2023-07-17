@@ -77,6 +77,8 @@ elif args.process == "4":
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print("device: ", device)
+# device = torch.device('cpu')
 dataset = PygNodePropPredDataset(name = 'ogbn-products')
 split_idx = dataset.get_idx_split()
 evaluator = Evaluator(name='ogbn-products')
