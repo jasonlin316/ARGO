@@ -1,5 +1,8 @@
+# Reaches around 0.7930 test accuracy.
+
 import argparse
 import os.path as osp
+import time
 
 import torch
 import torch.nn.functional as F
@@ -16,34 +19,37 @@ import torch.multiprocessing as mp
 from torch.nn.parallel import DistributedDataParallel
 import psutil
 import os
+from torch.profiler import profile, ProfilerActivity
+import os
+# import merge
 
-def get_core_num(process_num, rank, n):
+def get_core_num(process_num, rank, n, load_core_num=4):
     
     if process_num == 1:
-        load_core = list(range(0,4))
-        comp_core = list(range(4,n))
+        load_core = list(range(0,load_core_num))
+        comp_core = list(range(load_core_num,n))
 
     elif process_num == 2:
         if rank == 0:
-            load_core = list(range(0,4))
-            comp_core = list(range(4,n//2))
+            load_core = list(range(0,load_core_num))
+            comp_core = list(range(load_core_num,n//2))
         else:
-            load_core = list(range(n//2,n//2+4))
-            comp_core = list(range(n//2+4,n))
+            load_core = list(range(n//2,n//2+load_core_num))
+            comp_core = list(range(n//2+load_core_num,n))
 
     elif process_num == 4:
         if rank == 0:
-            load_core = list(range(0,4))
-            comp_core = list(range(4,n//4))
+            load_core = list(range(0,load_core_num))
+            comp_core = list(range(load_core_num,n//4))
         elif rank == 1:
-            load_core = list(range(n//4,n//4+4))
-            comp_core = list(range(n//4+4,n//2))
+            load_core = list(range(n//4,n//4+load_core_num))
+            comp_core = list(range(n//4+load_core_num,n//2))
         elif rank == 2:
-            load_core = list(range(n//2,n//2+4))
-            comp_core = list(range(n//2+4,n//4*3))
+            load_core = list(range(n//2,n//2+load_core_num))
+            comp_core = list(range(n//2+load_core_num,n//4*3))
         else:
-            load_core = list(range(n//4*3,n//4*3+4))
-            comp_core = list(range(n//4*3+4,n))
+            load_core = list(range(n//4*3,n//4*3+load_core_num))
+            comp_core = list(range(n//4*3+load_core_num,n))
     return load_core, comp_core
 
 
@@ -53,6 +59,12 @@ parser.add_argument(
     "--process",
     default= "1",
     choices=["1", "2", "4"],
+)
+
+parser.add_argument(
+    "--l_core",
+    default= "4",
+    help="load core number"
 )
 
 parser.add_argument(
@@ -68,21 +80,16 @@ args.mode = "cpu"
 print(f"Training in {args.mode} mode.")
 times = int(args.run_times)
 
-process_num = 1
-if args.process == "2":
-    process_num = 2
-elif args.process == "4":
-    process_num = 4
-
-
-
+process_num = int(args.process)
+load_core_num = int(args.l_core)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-print("device: ", device)
+print("device: ", device, "process_num: ", process_num, "load_core_num: ", load_core_num)
 # device = torch.device('cpu')
 dataset = PygNodePropPredDataset(name = 'ogbn-products')
 split_idx = dataset.get_idx_split()
 evaluator = Evaluator(name='ogbn-products')
 data = dataset[0].to(device, 'x', 'y')
+trace_list = []
 
 
 subgraph_loader = NeighborLoader(
@@ -147,7 +154,7 @@ class SAGE(torch.nn.Module):
 
 def run(rank, times, model, process_num):
     n = psutil.cpu_count(logical=False)
-    load_core, comp_core = get_core_num(process_num, rank, n)
+    load_core, comp_core = get_core_num(process_num, rank, n, load_core_num)
     print("rank {}: loading data using core {} ".format(rank,load_core))
     # set compute cores
     os.environ["OMP_NUM_THREADS"] = str(len(comp_core))
@@ -162,82 +169,121 @@ def run(rank, times, model, process_num):
 
     dist.init_process_group('gloo', rank=rank, world_size=process_num)  
     train_idx = split_idx['train'].to(device)
+
+    # 在DDP_time中追加写入一空行
+    with open('./DDP_profile/DDP_time.txt', 'a') as f:
+        f.write('\n')
+        if rank == 0:
+            f.write(f'Load_num:{load_core_num}| Process_num:{process_num}\n')
+            f.write("=========================================================\n")
     
     for run in range(times):
         if rank == 0:
             print(f'\nRun {run:02d}:\n')
         model.reset_parameters()
         train(model, rank, load_core, train_idx)
-        
+        # combine_name = "DDP_profile/combine_p{}_l{}.json".format(process_num, load_core_num)
+        # merge.merge_trace_files(trace_list, combine_name)
+        test_loading_time(rank, train_idx, process_num, load_core_num)
 
-def train(model, rank, load_core, train_idx):
-    
+def test_loading_time(rank, train_idx, process_num, load_core_num):
+    print("rank {}: testing loading time".format(rank))
     train_sampler = DistributedSampler(
-        train_idx,
-        num_replicas=process_num,
-        rank=rank
-    )
+            train_idx,
+            num_replicas=process_num,
+            rank=rank
+        )
     train_loader = NeighborLoader(
         data,
         input_nodes=split_idx['train'],
         num_neighbors=[15, 10, 5],
-        batch_size=1024,
-        # shuffle=True,
-        num_workers=len(load_core),
+        batch_size=4096//process_num,
+        num_workers=load_core_num,
         persistent_workers=True,
         sampler=train_sampler
     )
+    start_time = time.time()
+    for batch in train_loader:
+        pass
+    end_time = time.time()
+    # 在DDP_time.txt中追加写入每个进程的加载时间
+    avg_load_time = (end_time - start_time) / process_num
+    with open('./DDP_profile/DDP_time.txt', 'a') as f:
+        f.write(f'Rank {rank} Load Time: {avg_load_time}\n')
+    print(f'Load_num:{load_core_num}| Process_num:{process_num} | Rank {rank} Load Time: {avg_load_time}\n')
+        
 
-    
-    model = DistributedDataParallel(model)
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
+def train(model, rank, load_core, train_idx):
+    with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
+        train_sampler = DistributedSampler(
+            train_idx,
+            num_replicas=process_num,
+            rank=rank
+        )
+        train_loader = NeighborLoader(
+            data,
+            input_nodes=split_idx['train'],
+            num_neighbors=[15, 10, 5],
+            batch_size=4096//process_num,
+            num_workers=len(load_core),
+            persistent_workers=True,
+            sampler=train_sampler
+        )
 
-    best_val_acc = final_test_acc = 0.0
-    test_accs = []
-    for epoch in range(7):
-        # loss, acc = train(epoch)
-        model.train()
-        if rank == 0:
-            pbar = tqdm(total=split_idx['train'].size(0)//process_num)
-            pbar.set_description(f'Rank {rank} Epoch {epoch:02d}')
+        model = DistributedDataParallel(model)
+        optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
 
-        total_loss = total_correct = total_cnt =  0
-        with train_loader.enable_cpu_affinity(loader_cores = load_core):
-            for batch in train_loader:
-                optimizer.zero_grad()
-                out = model(batch.x, batch.edge_index.to(device))[:batch.batch_size]
-                y = batch.y[:batch.batch_size].squeeze()
-                # print("rank {}: out:{}, y:{}".format(rank, out, y))
-                loss = F.cross_entropy(out, y)
-                loss.backward()
-                optimizer.step()
-                # print("rank {}: loss:{}".format(rank, loss))
-                total_loss += float(loss)
-                total_correct += int(out.argmax(dim=-1).eq(y).sum())
-                total_cnt += batch.batch_size
-                if rank == 0:
-                    pbar.update(batch.batch_size)
-        if rank == 0:
-            pbar.close()
+        best_val_acc = final_test_acc = 0.0
+        test_accs = []
+        trace_name = "DDP_profile/trace_p{}_l{}_r{}.json".format(process_num, load_core_num, rank)
+        for epoch in range(1):
+            start_time = time.time()
+            model.train()
+            if rank == 0:
+                pbar = tqdm(total=split_idx['train'].size(0)//process_num)
+                pbar.set_description(f'Rank {rank} Epoch {epoch:02d}')
 
-        loss = total_loss / len(train_loader)
-        approx_acc = total_correct / total_cnt
-        print(f'Rank {rank}|Epoch {epoch:02d}, Loss: {loss:.4f}, Approx. Train: {approx_acc:.4f}')
+            total_loss = total_correct = total_cnt =  0
+            with train_loader.enable_cpu_affinity(loader_cores = load_core):
+                for batch in train_loader:
+                    optimizer.zero_grad()
+                    out = model(batch.x, batch.edge_index.to(device))[:batch.batch_size]
+                    y = batch.y[:batch.batch_size].squeeze()
+                    loss = F.cross_entropy(out, y)
+                    loss.backward()
+                    optimizer.step()
+                    total_loss += float(loss)
+                    total_correct += int(out.argmax(dim=-1).eq(y).sum())
+                    total_cnt += batch.batch_size
+                    if rank == 0:
+                        pbar.update(batch.batch_size)
+            if rank == 0:
+                pbar.close()
 
-        if epoch > 5:
-            train_acc, val_acc, test_acc = test()
-            print(f'Train: {train_acc:.4f}, Val: {val_acc:.4f}, '
-                f'Test: {test_acc:.4f}')
+            end_time = time.time()
+            with open('./DDP_profile/DDP_time.txt', 'a') as f:
+                f.write(f'Rank {rank} Epoch {epoch} Train_time: {end_time - start_time}\n')
 
-            if val_acc > best_val_acc:
-                best_val_acc = val_acc
-                final_test_acc = test_acc
-                test_accs.append(final_test_acc)
-       
+            loss = total_loss / len(train_loader)
+            approx_acc = total_correct / total_cnt
+            print(f'Rank {rank}|Epoch {epoch:02d}, Loss: {loss:.4f}, Approx. Train: {approx_acc:.4f}')
+            
+            # if epoch % 2 == 0:
+            # train_acc, val_acc, test_acc = test()
+            # print(f'Train: {train_acc:.4f}, Val: {val_acc:.4f}, '
+            #     f'Test: {test_acc:.4f}')
 
-    test_acc = torch.tensor(test_accs)
-    print('============================')
-    print(f'Final Test: {test_acc.mean():.4f} ± {test_acc.std():.4f}')
+            # if val_acc > best_val_acc:
+            #     best_val_acc = val_acc
+            #     final_test_acc = test_acc
+            #     test_accs.append(final_test_acc)
+    process_name = "process"+str(rank)
+    prof.export_chrome_trace(trace_name)
+    trace_list.append(trace_name)
+    # test_acc = torch.tensor(test_accs)
+    # print(test_accs, test_acc)
+    # print('============================')
+    # print(f'Final Test: {test_acc.mean():.4f} ± {test_acc.std():.4f}')
     
 
 
@@ -261,6 +307,7 @@ def test():
     })['acc']
     test_acc = evaluator.eval({
         'y_true': y_true[split_idx['test']],
+
         'y_pred': y_pred[split_idx['test']],
     })['acc']
 
@@ -288,5 +335,10 @@ for p in processes:
     p.join()
 
 print("program finished.")
+
+
+
+
+
 
 
