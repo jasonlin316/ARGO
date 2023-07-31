@@ -1,7 +1,6 @@
 # Reaches around 0.7930 test accuracy.
 
 import argparse
-import os.path as osp
 import time
 
 import torch
@@ -22,35 +21,89 @@ import os
 from torch.profiler import profile, ProfilerActivity
 import os
 # import merge
+import subprocess
+
+def get_mask(comp_core):
+    mask = 0
+    for core in comp_core:
+        mask += 2 ** core
+    return hex(mask)
 
 def get_core_num(process_num, rank, n, load_core_num=4):
     
     if process_num == 1:
         load_core = list(range(0,load_core_num))
         comp_core = list(range(load_core_num,n))
+        all_core = list(range(0,n))
+        
 
     elif process_num == 2:
         if rank == 0:
             load_core = list(range(0,load_core_num))
             comp_core = list(range(load_core_num,n//2))
+            all_core = list(range(0,n//2))
+            # load_core = [0]
+            # comp_core = [1]
+            # all_core = [0,1]
         else:
             load_core = list(range(n//2,n//2+load_core_num))
             comp_core = list(range(n//2+load_core_num,n))
+            all_core = list(range(n//2,n))
+            # load_core = [16,17]
+            # comp_core = [19]
+            # all_core = [16,17,19]
 
     elif process_num == 4:
         if rank == 0:
             load_core = list(range(0,load_core_num))
             comp_core = list(range(load_core_num,n//4))
+            all_core = list(range(0,n//4))
         elif rank == 1:
             load_core = list(range(n//4,n//4+load_core_num))
             comp_core = list(range(n//4+load_core_num,n//2))
+            all_core = list(range(n//4,n//2))
         elif rank == 2:
             load_core = list(range(n//2,n//2+load_core_num))
             comp_core = list(range(n//2+load_core_num,n//4*3))
+            all_core = list(range(n//2,n//4*3))
         else:
             load_core = list(range(n//4*3,n//4*3+load_core_num))
             comp_core = list(range(n//4*3+load_core_num,n))
-    return load_core, comp_core
+            all_core = list(range(n//4*3,n))
+    return load_core, comp_core, all_core
+
+def set_specific_core_num():
+    if process_num == 1:
+        comp_core = []
+        load_core = []
+        all_core = load_core + comp_core
+    elif process_num == 2:
+        if rank == 0:
+            load_core = [0]
+            comp_core = [1]
+            all_core = load_core + comp_core
+        else:
+            load_core = [16]
+            comp_core = [19]
+            all_core = load_core + comp_core
+    elif process_num == 4:
+        if rank == 0:
+            comp_core = [0,1,2]
+            load_core = [16]
+            all_core = load_core + comp_core
+        elif rank == 1:
+            comp_core = [4,5,6]
+            load_core = [17]
+            all_core = load_core + comp_core
+        elif rank == 2:
+            comp_core = [8,9,10]
+            load_core = [18]
+            all_core = load_core + comp_core
+        else:
+            comp_core = [12,13,14]
+            load_core = [19]
+            all_core = load_core + comp_core
+    return load_core, comp_core, all_core
 
 
 parser = argparse.ArgumentParser()
@@ -82,7 +135,7 @@ times = int(args.run_times)
 
 process_num = int(args.process)
 load_core_num = int(args.l_core)
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cpu')
 print("device: ", device, "process_num: ", process_num, "load_core_num: ", load_core_num)
 # device = torch.device('cpu')
 dataset = PygNodePropPredDataset(name = 'ogbn-products')
@@ -152,22 +205,14 @@ class SAGE(torch.nn.Module):
 
         return x_all
 
+# 查看physical core 属于哪个NUMA节点
+# cat /proc/cpuinfo | grep -E "physical id|core id"
+
+
 def run(rank, times, model, process_num):
-    n = psutil.cpu_count(logical=False)
-    load_core, comp_core = get_core_num(process_num, rank, n, load_core_num)
-    print("rank {}: loading data using core {} ".format(rank,load_core))
-    # set compute cores
-    os.environ["OMP_NUM_THREADS"] = str(len(comp_core))
-    os.environ["OMP_PLACES"] = "cores"
-    os.environ["OMP_PROC_BIND"] = "close"
-    os.environ["KMP_AFFINITY"] = "proclist=[" + ",".join(str(core) for core in comp_core) + "]"
-    # cancel the KMP warning
-    os.environ["KMP_WARNINGS"] = "off"
-
-    torch.set_num_threads(len(comp_core))
-    print("rank {}, using compute core: {}".format(rank, comp_core))
-
-    dist.init_process_group('gloo', rank=rank, world_size=process_num)  
+    # 物理cpu的数量
+    n = psutil.cpu_count(logical=False) 
+    dist.init_process_group('gloo', rank=rank, world_size=process_num)   
     train_idx = split_idx['train'].to(device)
 
     # 在DDP_time中追加写入一空行
@@ -178,15 +223,18 @@ def run(rank, times, model, process_num):
             f.write("=========================================================\n")
     
     for run in range(times):
+        model.reset_parameters()
+        model = DistributedDataParallel(model)
         if rank == 0:
             print(f'\nRun {run:02d}:\n')
-        model.reset_parameters()
-        train(model, rank, load_core, train_idx)
-        # combine_name = "DDP_profile/combine_p{}_l{}.json".format(process_num, load_core_num)
-        # merge.merge_trace_files(trace_list, combine_name)
         test_loading_time(rank, train_idx, process_num, load_core_num)
+        train(model, rank, train_idx)
+        # test_loading_time(rank, train_idx, process_num, load_core_num)
 
 def test_loading_time(rank, train_idx, process_num, load_core_num):
+    n = psutil.cpu_count(logical=False)
+    load_core, comp_core, all_core = get_core_num(process_num, rank, n, load_core_num)
+    # load_core, comp_core, all_core = set_specific_core_num()
     print("rank {}: testing loading time".format(rank))
     train_sampler = DistributedSampler(
             train_idx,
@@ -198,22 +246,39 @@ def test_loading_time(rank, train_idx, process_num, load_core_num):
         input_nodes=split_idx['train'],
         num_neighbors=[15, 10, 5],
         batch_size=4096//process_num,
-        num_workers=load_core_num,
+        num_workers=len(load_core),
         persistent_workers=True,
         sampler=train_sampler
     )
     start_time = time.time()
-    for batch in train_loader:
-        pass
+    with train_loader.enable_cpu_affinity(loader_cores = load_core):
+        for idx,batch in enumerate(train_loader):
+            # if idx % 10 == 0:
+                # print("rank {}: loading {}th batch".format(rank, idx))
+            pass
+    
     end_time = time.time()
     # 在DDP_time.txt中追加写入每个进程的加载时间
-    avg_load_time = (end_time - start_time) / process_num
+    avg_load_time = (end_time - start_time) / len(train_loader)
     with open('./DDP_profile/DDP_time.txt', 'a') as f:
         f.write(f'Rank {rank} Load Time: {avg_load_time}\n')
     print(f'Load_num:{load_core_num}| Process_num:{process_num} | Rank {rank} Load Time: {avg_load_time}\n')
         
 
-def train(model, rank, load_core, train_idx):
+def train(model, rank, train_idx):
+    n = psutil.cpu_count(logical=False)
+    load_core, comp_core, all_core = get_core_num(process_num, rank, n, load_core_num)
+
+    # set compute cores 【taskset】
+    torch.set_num_threads(len(comp_core))
+    pid = os.getpid()
+    print("[TASKSET] rank {}, pid: {}".format(rank, pid))
+    core_mask = get_mask(comp_core)
+    subprocess.run(["taskset", "-a","-p", str(core_mask), str(pid)])
+    
+    print("[TASKSET] rank {}, using compute core: {}".format(rank, comp_core))
+
+
     with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
         train_sampler = DistributedSampler(
             train_idx,
@@ -226,17 +291,17 @@ def train(model, rank, load_core, train_idx):
             num_neighbors=[15, 10, 5],
             batch_size=4096//process_num,
             num_workers=len(load_core),
-            persistent_workers=True,
+            persistent_workers=True, # 是否牺牲内存换取性能
             sampler=train_sampler
         )
 
-        model = DistributedDataParallel(model)
         optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
 
         best_val_acc = final_test_acc = 0.0
         test_accs = []
         trace_name = "DDP_profile/trace_p{}_l{}_r{}.json".format(process_num, load_core_num, rank)
         for epoch in range(1):
+            train_sampler.set_epoch(epoch)
             start_time = time.time()
             model.train()
             if rank == 0:
@@ -245,6 +310,7 @@ def train(model, rank, load_core, train_idx):
 
             total_loss = total_correct = total_cnt =  0
             with train_loader.enable_cpu_affinity(loader_cores = load_core):
+                print("[LOADER] rank {}: loading data using core {} ".format(rank,load_core))
                 for batch in train_loader:
                     optimizer.zero_grad()
                     out = model(batch.x, batch.edge_index.to(device))[:batch.batch_size]
@@ -277,7 +343,6 @@ def train(model, rank, load_core, train_idx):
             #     best_val_acc = val_acc
             #     final_test_acc = test_acc
             #     test_accs.append(final_test_acc)
-    process_name = "process"+str(rank)
     prof.export_chrome_trace(trace_name)
     trace_list.append(trace_name)
     # test_acc = torch.tensor(test_accs)
@@ -323,7 +388,7 @@ master_port = '29500'
 processes = []
 try:
     mp.set_start_method('fork')
-    print("forked")
+    print("set start method to fork")
 except RuntimeError:
     pass
         

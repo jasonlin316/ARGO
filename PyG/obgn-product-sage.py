@@ -9,10 +9,11 @@ from tqdm import tqdm
 
 from torch_geometric.loader import NeighborLoader
 from torch_geometric.nn import SAGEConv
+import time
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-root = osp.join(osp.dirname(osp.realpath(__file__)), '..', 'data', 'products')
-dataset = PygNodePropPredDataset('ogbn-products', root)
+# root = osp.join(osp.dirname(osp.realpath(__file__)), '..', 'data', 'products')
+dataset = PygNodePropPredDataset('ogbn-products')
 split_idx = dataset.get_idx_split()
 evaluator = Evaluator(name='ogbn-products')
 data = dataset[0].to(device, 'x', 'y')
@@ -23,7 +24,7 @@ train_loader = NeighborLoader(
     num_neighbors=[15, 10, 5],
     batch_size=1024,
     shuffle=True,
-    num_workers=12,
+    num_workers=2,
     persistent_workers=True,
 )
 subgraph_loader = NeighborLoader(
@@ -98,7 +99,11 @@ def train(epoch):
     pbar.set_description(f'Epoch {epoch:02d}')
 
     total_loss = total_correct = 0
+    load_time1 = load_time2 = total_load_time = 0
     for batch in train_loader:
+        if load_time1 != 0:
+            load_time2 = time.time()
+            total_load_time += load_time2 - load_time1
         optimizer.zero_grad()
         out = model(batch.x, batch.edge_index.to(device))[:batch.batch_size]
         y = batch.y[:batch.batch_size].squeeze()
@@ -109,8 +114,14 @@ def train(epoch):
         total_loss += float(loss)
         total_correct += int(out.argmax(dim=-1).eq(y).sum())
         pbar.update(batch.batch_size)
+        load_time1 = time.time()
 
     pbar.close()
+    avg_load_time = total_load_time / len(train_loader)
+    print(f'avg load time: {avg_load_time}')
+    with open('origin_time.txt', 'a') as f:
+            f.write(f'Epoch {epoch} Load Time: {avg_load_time}\n')
+
 
     loss = total_loss / len(train_loader)
     approx_acc = total_correct / split_idx['train'].size(0)
@@ -152,8 +163,14 @@ for run in range(1, 11):
 
     best_val_acc = final_test_acc = 0.0
     for epoch in range(1, 21):
+        start_time = time.time()
         loss, acc = train(epoch)
+        end_time = time.time()
+        print(f'Epoch {epoch}, Time: {end_time - start_time:.4f}')
+        with open('origin_time.txt', 'a') as f:
+            f.write(f'Epoch {epoch} Time: {end_time - start_time:.4f}\n')
         print(f'Epoch {epoch:02d}, Loss: {loss:.4f}, Approx. Train: {acc:.4f}')
+
 
         if epoch > 5:
             train_acc, val_acc, test_acc = test()
