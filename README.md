@@ -38,6 +38,7 @@ conda activate myenv
 conda config --add channels conda-forge
 conda config --add channels pytorch
 conda config --add channels dglteam
+conda config --add channels pyg
 ```
 
 6. Install the required packages:
