@@ -63,7 +63,7 @@ conda install --file requirements.txt
 ```shell
 bash verify.sh
 ```
-Afterwards, a .csv file named "grid_serach_{dataset_name}.csv" will be generated for each dataset.
+Afterwards, a .csv file named "grid_serach_{dataset}.csv" will be generated for each dataset.
 
 10. Next, we can run the auto-tuner to see what configuration it finds:
     
@@ -73,7 +73,7 @@ bash bo.sh
 
 11. Two outputs will be generated for each dataset
 ```shell
-convergence_plot_(dataset).png
-bo_(dataset).txt
+convergence_plot_{dataset}.png
+bo_{dataset}.txt
 ```
 
