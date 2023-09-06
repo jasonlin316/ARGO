@@ -33,7 +33,7 @@ from torch.nn.parallel import DistributedDataParallel
 import psutil
 
 from load_mag_to_shm import fetch_datas_from_shm
-from merge import merge_trace_files
+
 import csv
 TRACE_NAME = 'mixture_product_{}.json'
 OUTPUT_TRACE_NAME = "combine.json"
@@ -441,7 +441,7 @@ if __name__ == "__main__":
                 idx.append(i)
         dataset.train_idx = torch.tensor(idx)
     else:
-        dataset = AsNodePredDataset(DglNodePropPredDataset(arguments.dataset, arguments.data_path))
+        dataset = AsNodePredDataset(DglNodePropPredDataset(arguments.dataset))
         g = dataset[0]
 
     data = (
