@@ -19,7 +19,7 @@ from dgl.data import FlickrDataset, YelpDataset, RedditDataset
 from dgl.dataloading import (
     DataLoader,
     MultiLayerFullNeighborSampler,
-    NeighborSampler, ShaDowKHopSampler,
+    NeighborSampler, ShaDowKHopSampler, SAINTSampler
 )
 from ogb.nodeproppred import DglNodePropPredDataset
 from ogb.lsc import MAG240MDataset, MAG240MEvaluator
@@ -71,21 +71,18 @@ def get_last_level_cache_size():
         # Parse the output to find the L3 cache size
         lines = output.split('\n')
         for line in lines:
-            if 'L3 cache:' in line:
-                cache_info = line.split(':')
-                if len(cache_info) == 2:
-                    cache_size_str = cache_info[1].strip()
-                    cache_size_mb = int(cache_size_str.replace(' MiB', ''))
-                    return cache_size_mb
-
+            if 'L3 cache:' in line or 'L3:' in line:
+                res = [int(i) for i in line.split() if i.isdigit()]
+                return int(res[0])
         return None
 
     except Exception as e:
         print("Error occurred:", e)
         return None
+
     
 class GNN(nn.Module):
-    def __init__(self, in_size, hid_size, out_size, num_layers=2, model_name='sage'):
+    def __init__(self, in_size, hid_size, out_size, num_layers=3, model_name='sage'):
         super().__init__()
         self.layers = nn.ModuleList()
 
@@ -205,22 +202,21 @@ def device_mapping(num_cpu_proc):
     assert not is_cpu_proc(num_cpu_proc), "For GPU Comp process only"
     return dist.get_rank() - num_cpu_proc
 
-# num_of_samplers = 8
 
-def assign_cores(num_cpu_proc):
+def assign_cores(num_cpu_proc,n_samp):
     assert is_cpu_proc(num_cpu_proc), "For CPU Comp process only"
     rank = dist.get_rank()
     load_core, comp_core = [], []
     n = psutil.cpu_count(logical=False)
+    # n = 72
     size = num_cpu_proc
-    if size <= 4:
-        num_of_samplers = 4//size
-    else:
-        num_of_samplers = 8//size
-    # num_of_samplers = 8
+    num_of_samplers = n_samp
     load_core = list(range(n//size*rank,n//size*rank+num_of_samplers))
     comp_core = list(range(n//size*rank+num_of_samplers,n//size*(rank+1)))
-    # comp_core = list(range(n//size*rank+num_of_samplers,n//size*rank+num_of_samplers+30))
+    # comp_core = list(range(n//size*rank+num_of_samplers,n//size*rank+num_of_samplers+16))
+    # c_core = 108
+    # load_core = list(range((num_of_samplers+c_core)*rank, (num_of_samplers+c_core)*rank+num_of_samplers))
+    # comp_core = list(range((num_of_samplers+c_core)*rank+num_of_samplers, (num_of_samplers+c_core)*rank+num_of_samplers+c_core))
 
     return load_core, comp_core
 
@@ -248,6 +244,8 @@ def _train(loader, model, opt, **kwargs):
     process = kwargs['process']
     device = torch.device("cpu" if is_cpu_proc(process)
                           else "cuda:{}".format(device_mapping(process)))
+    # device = torch.device("cuda:1")
+    
     for it, (input_nodes, output_nodes, blocks) in enumerate(loader):
         if hasattr(blocks, '__len__'):
             x = blocks[0].srcdata["feat"].to(torch.float32)
@@ -299,6 +297,7 @@ def train(rank, world_size, args, g, data, hidden, meta_data):
 
     device = torch.device("cpu" if is_cpu_proc(args.cpu_process)
                           else "cuda:{}".format(device_mapping(args.cpu_process)))
+    # device = torch.device("cuda:1")
 
     if not is_cpu_proc(args.cpu_process):
         torch.cuda.set_device(device)
@@ -310,10 +309,8 @@ def train(rank, world_size, args, g, data, hidden, meta_data):
     model = DistributedDataParallel(model)
 
     # g = dgl.add_self_loop(g)  # for GCN model, not work for Mag
-    if args.cpu_process <= 4:
-        num_of_samplers = 4//args.cpu_process
-    else:
-        num_of_samplers = 8//args.cpu_process
+    size = args.cpu_process
+    num_of_samplers = args.n_sampler
     
     # create loader
     drop_last, shuffle = True, True
@@ -330,31 +327,40 @@ def train(rank, world_size, args, g, data, hidden, meta_data):
     if args.sampler.lower() == 'neighbor':
         if args.neighbor == 0:
             sampler = NeighborSampler(
-                [25, 10],
+                [15, 10, 5],
                 prefetch_node_feats=["feat"],
                 prefetch_labels=["label"],
             )
             assert len(sampler.fanouts) == args.layer
         elif args.neighbor == 1:
             sampler = NeighborSampler(
-                [15, 15],
+                [5, 5, 5],
                 prefetch_node_feats=["feat"],
                 prefetch_labels=["label"],
             )
             assert len(sampler.fanouts) == args.layer
         else:
             sampler = NeighborSampler(
-                [25, 5],
+                [10, 10, 5],
                 prefetch_node_feats=["feat"],
                 prefetch_labels=["label"],
             )
             assert len(sampler.fanouts) == args.layer
     elif args.sampler.lower() == 'shadow':
-        sampler = ShaDowKHopSampler(
-            [10, 5],
-            output_device=device,
-            prefetch_node_feats=["feat"],
-        )
+        if args.neighbor == 0:
+            sampler = ShaDowKHopSampler(
+                [10, 5],
+                output_device=device,
+                prefetch_node_feats=["feat"],
+            )
+        else:
+            sampler = ShaDowKHopSampler(
+                [5, 5],
+                output_device=device,
+                prefetch_node_feats=["feat"],
+            )
+    elif args.sampler.lower() == 'full':
+        sampler = SAINTSampler(mode='node', budget=6000, output_device=device,prefetch_node_feats=["feat"])
     else:
         raise NotImplementedError
     train_dataloader = DataLoader(
@@ -390,25 +396,26 @@ def train(rank, world_size, args, g, data, hidden, meta_data):
         'device': device,
         'process': args.cpu_process
     }
-    for epoch in range(2):
+    for epoch in range(1):
         params['epoch'] = epoch
         model.train()
         tik = time.time()
-        if is_cpu_proc(args.cpu_process):
-            if params.get('load_core', None) is None or params.get('comp_core', None):
-                params['load_core'], params['comp_core'] = assign_cores(args.cpu_process)
-            loss = _train_cpu(**params)
-        else:
-            loss = _train(**params)
-        if rank == 0 and epoch == 1:
+        with profile(activities=[ProfilerActivity.CPU], record_shapes=True) as prof:
+            if is_cpu_proc(args.cpu_process):
+                if params.get('load_core', None) is None or params.get('comp_core', None):
+                    params['load_core'], params['comp_core'] = assign_cores(args.cpu_process,args.n_sampler)
+                loss = _train_cpu(**params)
+            else:
+                loss = _train(**params)
+        if rank == 0 and epoch == 0:
             meta_data.append(time.time() - tik)
             meta_data.append(0) # total nodes
             meta_data.append(0) # total edges
-    
+        prof.export_chrome_trace('3090_{dataset}_{b_size}.json'.format(dataset=args.dataset,b_size=args.batch_size))
     #ToDo: total nodes/edges of all processes
     for it, (input_nodes, output_nodes, blocks) in enumerate(train_dataloader):
         if it == 10: break
-        num_layer = 2
+        num_layer = 3
         cnt += 1
         if hasattr(blocks, '__len__'):
             for i in range(num_layer):
@@ -447,15 +454,17 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_path',
                         type=str,
-                        default='/data1/dgl')
+                        default='/home/jason/DDP_GNN/dataset/')
     parser.add_argument('--dataset',
                         type=str,
                         default='ogbn-products',
                         choices=["ogbn-papers100M", "ogbn-products", "mag240M", "reddit", "yelp", "flickr"])
     parser.add_argument("--cpu_process",
                         type=int,
-                        default=1,
-                        choices=[0, 1, 2, 4, 8])
+                        default=1)
+    parser.add_argument("--n_sampler",
+                        type=int,
+                        default=1)
     parser.add_argument("--gpu_process",
                         type=int,
                         default=0)
@@ -468,14 +477,14 @@ if __name__ == "__main__":
     parser.add_argument('--sampler',
                         type=str,
                         default='neighbor',
-                        choices=["neighbor", "shadow"])
+                        choices=["neighbor", "shadow","saint"])
     parser.add_argument('--model',
                         type=str,
                         default='sage',
                         choices=["sage", "gcn"])
     parser.add_argument('--layer',
                         type=int,
-                        default=2)
+                        default=3)
     parser.add_argument("--hidden",
                         type=int,
                         default= 128)
@@ -485,10 +494,10 @@ if __name__ == "__main__":
                         choices=[0,1,2])
     arguments = parser.parse_args()
     print("Program starts")
+    os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
     cache_size_mb = get_last_level_cache_size()
 
-    os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
     # Assure Consistency
     if arguments.cpu_gpu_ratio == 0 or arguments.cpu_process == 0:
         arguments.cpu_gpu_ratio = 0
@@ -506,9 +515,9 @@ if __name__ == "__main__":
     print('Use Dataset:', arguments.dataset)
     tik = time.time()
     if arguments.dataset == 'mag240M':
-        dataset = MAG240MDataset(root='../HiPC')
+        dataset = MAG240MDataset(root='/home/jason/HiPC/')
         print('Start Loading Graph Structure')
-        (g,), _ = dgl.load_graphs('./graph.dgl')
+        (g,), _ = dgl.load_graphs('/home/jason/HiPC/graph.dgl')
         g = g.formats(["csc"])
         print('Graph Structure Loading Finished!')
         paper_offset = dataset.num_authors + dataset.num_institutions
@@ -561,6 +570,7 @@ if __name__ == "__main__":
     # train(0, nprocs, arguments, g, data)
     mp.set_start_method('fork')
     processes = []
+    
     with Manager() as manager:
         meta_data = manager.list()
         for i in range(nprocs):
@@ -569,17 +579,18 @@ if __name__ == "__main__":
             processes.append(p)
         for p in processes:
             p.join()
-        mem_bw = run_stream_benchmark()
-        meta_data.append(psutil.cpu_count(logical = False))
-        meta_data.append(mem_bw)
-        meta_data.append(cache_size_mb)
-        meta_data.append(arguments.cpu_process)
-        meta_data.append(in_size)
-        meta_data.append(hidden_size)
-        meta_data.append(out_size)
-        print(meta_data)
-        with open('new_regression_test.csv', 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(meta_data)
+        # mem_bw = run_stream_benchmark()
+        # meta_data.append(psutil.cpu_count(logical = False))
+        # meta_data.append(mem_bw)
+        # meta_data.append(cache_size_mb)
+        # meta_data.append(arguments.cpu_process)
+        # meta_data.append(in_size)
+        # meta_data.append(hidden_size)
+        # meta_data.append(out_size)
+        # meta_data.append(arguments.cpu_process*arguments.n_sampler)
+        # print(meta_data)
+        # with open('aug24_test.csv', 'a', newline='') as file:
+        #     writer = csv.writer(file)
+        #     writer.writerow(meta_data)
 
     print("Program finished")
