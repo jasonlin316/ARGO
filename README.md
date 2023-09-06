@@ -23,13 +23,13 @@ bash Anaconda3-2023.03-Linux-x86_64.sh
 3. Create a virtual environment:
 
 ```shell
-conda create -n myenv python=3.8.1
+conda create -n py38 python=3.8.1
 ```
 
 4. Active the virtual environment:
 
 ```shell
-conda activate myenv
+conda activate py38
 ```
 
 5. Add the required Channels:
@@ -47,19 +47,33 @@ conda config --add channels pyg
 conda install --file requirements.txt
 ```
 
-7. Run the experiments
+7. Fix a bug in the Scikit-Optimization library. Find "transformer.py" which should locate in
+   ```~/anaconda3/envs/py38/lib/python3.8/site-packages/skopt/space/transformers.py```  
+   Once open the file, replace all ```np.int``` with ```int``` (there are two of them, located in line 262 and line 275)
+
+8. Try to run the experiment once to make sure the program runs correctly:  
+   ```
+   python -W ignore gnn_train.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 4
+   ```  
+   If we can see "total_time: (some number)" then the program executed successfully.  
+   Note: when running the program for the first time, the program will ask if you want to download the dataset; please enter "y" for the program to proceed.
+   
+10. Run the exhaustive search (this can take up to a day)
 
 ```shell
-bash prod.sh
-bash cite.sh
+bash verify.sh
 ```
-Note: when running the program for the first time, the program will ask if you want to download the dataset; please enter "y" for the program to proceed.
+Afterwards, a .csv file named "grid_serach_{dataset_name}.csv" will be generated for each dataset.
 
-8. Obtain the four outputs:
+10. Next, we can run the auto-tuner to see what configuration it finds:
+    
 ```shell
-DGL_products.txt
-DGL_DDP_products.txt
-DGL_citation.txt
-DGL_DDP_citation.txt
+bash bo.sh
+```
+
+11. Two outputs will be generated for each dataset
+```shell
+convergence_plot_(dataset).png
+bo_(dataset).txt
 ```
 
