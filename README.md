@@ -23,7 +23,7 @@ bash Anaconda3-2023.03-Linux-x86_64.sh
 3. Create a virtual environment:
 
 ```shell
-conda create -n myenv python=3.8
+conda create -n myenv python=3.8.1
 ```
 
 4. Active the virtual environment:
