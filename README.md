@@ -11,7 +11,7 @@ git clone https://github.com/jasonlin316/DDP_GNN.git
 2. Navigate to the project directory:
 
 ```shell
-cd DDP_GNN
+cd DDP_GNN/auto_tuner
 ```
 
 3. Download Anaconda and install
