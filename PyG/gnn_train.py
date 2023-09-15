@@ -120,13 +120,14 @@ def run(rank, times, process_num):
 
     for run in range(times):
         
-        model = SAGE(dataset.num_features, 256, dataset.num_classes, num_layers=3).to(device)
+        model = SAGE(dataset.num_features, 128, dataset.num_classes, num_layers=3).to(device)
         print(model)
         print("model created")
         model = DistributedDataParallel(model)
         print("DDP model created")
         train(model, rank, train_idx)
-    # dist.barrier()
+    
+    dist.barrier()
     # dist.destroy_process_group()
 
         
@@ -198,8 +199,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--cpu_process",
-        default= "1",
-        choices=["1", "2", "4"],
+        default= "2",
     )
 
     parser.add_argument(
@@ -269,23 +269,25 @@ if __name__ == '__main__':
     # model = model.to(device)
    
     # multi-processes training
-    # os.environ['MASTER_ADDR'] = '127.0.0.1'
-    # os.environ['MASTER_PORT'] = '29501'
+    os.environ['MASTER_ADDR'] = '127.0.0.1'
+    os.environ['MASTER_PORT'] = '29506'
 
     processes = []
     try:
-        mp.set_start_method('fork')
+        mp.set_start_method('fork', force=True)
         print("set start method to fork")
     except RuntimeError:
         pass
    
 
     for rank in range(process_num):
-        p = mp.Process(target=run, args=(rank, times, process_num))
+        p = dmp.Process(target=run, args=(rank, times, process_num))
         p.start()
         processes.append(p)
     for p in processes:
         p.join()
+    
+    # dist.destroy_process_group()
 
     print("program finished.")
 

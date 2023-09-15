@@ -191,7 +191,6 @@ if __name__ == '__main__':
     parser.add_argument(
         "--cpu_process",
         default= "1",
-        choices=["1", "2", "4"],
     )
 
     parser.add_argument(
@@ -260,12 +259,12 @@ if __name__ == '__main__':
         persistent_workers=True,
     )
 
-    model = SAGE(dataset.num_features, 256, dataset.num_classes, num_layers=3)
+    model = SAGE(dataset.num_features, 128, dataset.num_classes, num_layers=3)
     model = model.to(device)
    
     # multi-processes training
-    # os.environ['MASTER_ADDR'] = '127.0.0.1'
-    # os.environ['MASTER_PORT'] = '29501'
+    os.environ['MASTER_ADDR'] = '127.0.0.1'
+    os.environ['MASTER_PORT'] = '29506'
 
     processes = []
     try:

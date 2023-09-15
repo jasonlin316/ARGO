@@ -1,3289 +1,805 @@
 #!/bin/bash
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 7 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 8 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 6 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 7 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 8 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 5 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 5 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 7 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 8 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 6 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 7 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 8 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 5 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 5 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 7 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 8 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 6 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 7 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 8 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 5 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 5 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 4 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 4 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 2 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 3 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 4 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 7 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 8 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 1 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 2 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 3 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 4 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 6 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 7 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 8 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 5 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 8 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 1 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 1 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 1 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 2 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 2 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 3 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 5 --n_trainer 49
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 6 --n_trainer 48
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 46
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 7 --n_trainer 47
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 1
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 2
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 3
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 4
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 5
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 6
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 7
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 8
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 9
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 10
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 11
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 12
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 13
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 14
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 15
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 16
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 17
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 18
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 19
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 20
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 21
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 22
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 23
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 24
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 25
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 26
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 27
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 28
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 29
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 30
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 31
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 32
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 33
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 34
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 35
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 36
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 37
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 38
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 39
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 40
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 41
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 42
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 43
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 44
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 45
-torchrun PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 8 --n_trainer 46
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 14
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 1 --n_trainer 15
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 2 --n_trainer 14
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 3 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 4 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 5 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 6 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 7 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 2 --n_sampler 8 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 1 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 2 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 3 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 4 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 5 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 6 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 6 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 7 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 7 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 8 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 3 --n_sampler 8 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 4 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 5 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 6 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 7 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset ogbn-products --cpu_process 8 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 14
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 1 --n_trainer 15
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 2 --n_trainer 14
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 3 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 4 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 5 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 6 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 7 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 2 --n_sampler 8 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 1 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 2 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 3 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 4 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 5 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 6 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 6 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 7 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 7 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 8 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 3 --n_sampler 8 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 4 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 5 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 6 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 7 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset flickr --cpu_process 8 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 14
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 1 --n_trainer 15
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 2 --n_trainer 14
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 3 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 4 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 5 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 6 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 7 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 2 --n_sampler 8 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 1 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 2 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 3 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 4 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 5 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 6 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 6 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 7 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 7 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 8 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 3 --n_sampler 8 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 4 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 5 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 6 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 7 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset reddit --cpu_process 8 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 14
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 1 --n_trainer 15
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 2 --n_trainer 14
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 3 --n_trainer 13
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 4 --n_trainer 12
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 5 --n_trainer 11
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 6 --n_trainer 10
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 7 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 2 --n_sampler 8 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 1 --n_trainer 9
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 2 --n_trainer 8
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 3 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 4 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 5 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 6 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 6 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 7 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 7 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 8 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 3 --n_sampler 8 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 1 --n_trainer 7
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 2 --n_trainer 6
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 3 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 4 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 4 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 5 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 5 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 6 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 6 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 4 --n_sampler 7 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 1 --n_trainer 5
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 2 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 3 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 4 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 5 --n_sampler 5 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 1 --n_trainer 4
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 2 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 3 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 6 --n_sampler 4 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 7 --n_sampler 3 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 1 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 1 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 1 --n_trainer 3
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 2 --n_trainer 1
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 2 --n_trainer 2
+timeout 5400 python -W ignore PyG/gnn_train2.py --dataset yelp --cpu_process 8 --n_sampler 3 --n_trainer 1
