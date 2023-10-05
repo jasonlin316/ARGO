@@ -39,9 +39,6 @@ TRACE_NAME = 'mixture_product_{}.json'
 OUTPUT_TRACE_NAME = "combine.json"
 import subprocess
 
-import warnings
-warnings.filterwarnings("ignore")
-
     
 class GNN(nn.Module):
     def __init__(self, in_size, hid_size, out_size, num_layers=3, model_name='sage'):
@@ -346,7 +343,7 @@ def train(rank, world_size, args, g, data, hidden):
         'device': device,
         'process': args.cpu_process
     }
-    for epoch in range(1):
+    for epoch in range(3):
         params['epoch'] = epoch
         model.train()
         tik = time.time()
@@ -459,7 +456,7 @@ if __name__ == "__main__":
     os.environ['MASTER_PORT'] = '29501'
 
     # train(0, nprocs, arguments, g, data)
-    mp.set_start_method('fork')
+    mp.set_start_method('fork', force=True)
     processes = []
 
     tik = time.time()
@@ -472,7 +469,7 @@ if __name__ == "__main__":
     t = time.time() - tik
 
     meta_data = []
-    meta_data.append(t)
+    meta_data.append(t/3)
     meta_data.append(arguments.cpu_process)
     meta_data.append(arguments.n_sampler)
     meta_data.append(arguments.n_trainer)

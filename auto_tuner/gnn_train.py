@@ -346,7 +346,7 @@ def train(rank, world_size, args, g, data, hidden):
         'device': device,
         'process': args.cpu_process
     }
-    for epoch in range(1):
+    for epoch in range(3):
         params['epoch'] = epoch
         model.train()
         tik = time.time()
@@ -458,7 +458,7 @@ if __name__ == "__main__":
     os.environ['MASTER_PORT'] = '29501'
 
     # train(0, nprocs, arguments, g, data)
-    mp.set_start_method('fork')
+    mp.set_start_method('fork', force=True)
     processes = []
 
     tik = time.time()
@@ -468,4 +468,4 @@ if __name__ == "__main__":
         processes.append(p)
     for p in processes:
         p.join()
-    print('total_time: ',time.time() - tik )
+    print('total_time: ', (time.time() - tik)/3 )
