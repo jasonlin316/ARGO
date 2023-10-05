@@ -39,6 +39,9 @@ conda install -c conda-forge torchmetrics
 conda install -c conda-forge scikit-optimize
 conda install -c conda-forge matplotlib
 ```
+Note: there exist a bug in the older version of the Scikit-Optimization library.  
+To fix the bug, find the "transformer.py" which should be located in
+   ```~/anaconda3/envs/py38/lib/python3.8/site-packages/skopt/space/transformers.py```. Once open the file, replace all ```np.int``` with ```int```.
 
 ## Running the example GNN program
 
