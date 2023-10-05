@@ -1,7 +1,7 @@
 # ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor
 
 This README includes how to (1) set up the environment, (2) run the example code, and (3) modify your own GNN program to enable ARGO.  
-While we use the Deep Graph Library (DGL) as an example here, ARGO is also compatible with PyTorch-Geometric and details can be found in the PyG folder.
+While we use the Deep Graph Library (DGL) as an example here, ARGO is also compatible with PyTorch-Geometric (PyG) and details can be found in the PyG folder.
 
 ## Setting up the environment
 
