@@ -1,4 +1,4 @@
-# DDP GNN
+# ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor
 
 ## Installation
 
