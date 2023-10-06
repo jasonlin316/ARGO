@@ -47,13 +47,20 @@ Note: there exist a bug in the older version of the Scikit-Optimization library.
 To fix the bug, find the "transformer.py" which should be located in
    ```~/anaconda3/envs/py38/lib/python3.8/site-packages/skopt/space/transformers.py```. Once open the file, replace all ```np.int``` with ```int```.
 
+6. Download the OGB datasets (optional if you are not running any)
+```
+python ogb_example.py --dataset <ogb_dataset>
+```
+- Available choices [ogbn-products, ogbn-papers100M]  
+
+The program will ask if you want to download the dataset; please enter "y" for the program to proceed. You may terminate the program after the dataset is downloaded. 
+
+
 ## 2. Running the example GNN program
 ### Usage
   ```
   python main.py --dataset ogbn-products --sampler shadow --model sage
-  ```
-Note: when running the program for the first time for the OGB datasets, the program will ask if you want to download the dataset; please enter "y" for the program to proceed.
-
+  ``` 
   Important Arguments: 
   - `--dataset`: the training datasets. Available choices [ogbn-products, ogbn-papers100M, reddit, flickr, yelp]
   - `--sampler`: the mini-batch sampling algorithm. Available choices [shadow, neighbor]
