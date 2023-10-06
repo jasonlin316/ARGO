@@ -12,7 +12,7 @@ While we use the Deep Graph Library (DGL) as an example here, ARGO is also compa
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/jasonlin316/DDP_GNN.git
+git clone https://github.com/jasonlin316/ARGO.git
 ```
 
 2. Download Anaconda and install
