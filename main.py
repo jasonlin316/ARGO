@@ -184,7 +184,7 @@ if __name__ == "__main__":
     parser.add_argument('--dataset',
                         type=str,
                         default='ogbn-products',
-                        choices=["ogbn-papers100M", "ogbn-products", "mag240M", "reddit", "yelp", "flickr"])
+                        choices=["ogbn-papers100M", "ogbn-products",  "reddit", "yelp", "flickr"])
     parser.add_argument("--batch_size",
                         type=int,
                         default=1024 * 4)
