@@ -74,4 +74,5 @@ Note: the default number of layer is 3. If you want to change the number of laye
 
 
 ## 3. Enabling ARGO on your own GNN program
-   
+
+In this section, we provide a step-by-step tutorial on how to enable ARGO on a DGL program. We use the ```ogb_example.py``` file in this repo as an example.  
