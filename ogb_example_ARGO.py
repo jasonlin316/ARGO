@@ -298,6 +298,6 @@ if __name__ == "__main__":
     os.environ['MASTER_ADDR'] = '127.0.0.1'
     os.environ['MASTER_PORT'] = '29501'
     mp.set_start_method('fork', force=True)
-    runtime = ARGO(n_search = 10, epoch = args.num_epochs, batch_size = args.batch_size) #initialization
+    runtime = ARGO(n_search = 15, epoch = args.num_epochs, batch_size = args.batch_size) #initialization
     runtime.run(train, args=(args, device, data)) # wrap the training function
         
