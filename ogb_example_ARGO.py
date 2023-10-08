@@ -227,13 +227,11 @@ def train(args, device, data, rank, world_size, comp_core, load_core, counter, b
             toc = time.time()
             print("Epoch Time(s): {:.4f}".format(toc - tic))
     dist.barrier()
-    EPOCH = counter[0]
-    LOSS = loss
     if rank == 0:
-        th.save({'epoch': EPOCH,
+        th.save({'epoch': counter[0],
                     'model_state_dict': model.state_dict(),
                     'optimizer_state_dict': optimizer.state_dict(),
-                    'loss': LOSS,
+                    'loss': loss,
                     }, PATH)
     return best_test_acc
 
