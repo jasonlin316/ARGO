@@ -81,113 +81,100 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
 
 1. First, include all necessary packages on top of the file. Please place your file and ```argo.py``` in the same directory.
 
-```
-import os
-import torch.distributed as dist
-from torch.nn.parallel import DistributedDataParallel
-import torch.multiprocessing as mp
-from argo import ARGO
-```
+   ```
+   import os
+   import torch.distributed as dist
+   from torch.nn.parallel import DistributedDataParallel
+   import torch.multiprocessing as mp
+   from argo import ARGO
+   ```
 
 2. Setup PyTorch Distributed Data Parallel (DDP). 
-  1. Add the initialization function on top of the training program, and wrap the ```model``` with the DDP wrapper
-  ```
-  def train(...):
-    dist.init_process_group('gloo', rank=rank, world_size=world_size) # newly added
-    model = SAGE(...) # original code
-    model = DistributedDataParallel(model) # newly added
-    ...
-  ```
-  2. In the main program, add the following before the launching the training function
-  ```
-  os.environ['MASTER_ADDR'] = '127.0.0.1'
-  os.environ['MASTER_PORT'] = '29501'
-  mp.set_start_method('fork', force=True)
-  train(args, device, data) # original code for launching the training function
-  ```
+    1. Add the initialization function on top of the training program, and wrap the ```model``` with the DDP wrapper
+     ```
+     def train(...):
+       dist.init_process_group('gloo', rank=rank, world_size=world_size) # newly added
+       model = SAGE(...) # original code
+       model = DistributedDataParallel(model) # newly added
+       ...
+     ```
+    2. In the main program, add the following before launching the training function
+    
+     ```
+     os.environ['MASTER_ADDR'] = '127.0.0.1'
+     os.environ['MASTER_PORT'] = '29501'
+     mp.set_start_method('fork', force=True)
+     train(args, device, data) # original code for launching the training function
+     ```
 
-3. Enable ARGO by inititalizing the runtime system, and wrap the training function
-```
-runtime = ARGO(n_search = 10, epoch = 20, batch_size = args.batch_size) #initialization
-runtime.run(train, args=(args, device, data)) # wrap the training function
-```
+3. Enable ARGO by initializing the runtime system, and wrapping the training function
+   ```
+   runtime = ARGO(n_search = 10, epoch = 20, batch_size = args.batch_size) #initialization
+   runtime.run(train, args=(args, device, data)) # wrap the training function
+   ```
 
-4. Modify the input of the training function, by adding some parameters after the original inputs.
-```
-def train(args, device, data): # original training function
-```
-  Add ```rank, world_size, comp_core, load_core, counter, b_size, ep```:
-```
-def train(args, device, data, rank, world_size, comp_core, load_core, counter, b_size, ep):
-```
+4. Modify the input of the training function, by directly adding ARGO parameters after the original inputs.
+   This is the original function:
+   ```
+   def train(args, device, data):
+   ```
+   Add ```rank, world_size, comp_core, load_core, counter, b_size, ep``` like this:
+   ```
+   def train(args, device, data, rank, world_size, comp_core, load_core, counter, b_size, ep):
+   ```
 
-5. Modify the data_loader function in the training function
-Original Program:
-```
-dataloader = dgl.dataloading.DataLoader(
-        g,
-        train_nid,
-        sampler,
-        batch_size=args.batch_size,
-        shuffle=True,
-        drop_last=False,
-        num_workers=args.num_workers)
-```
-Modified:
-```
-dataloader = dgl.dataloading.DataLoader(
-        g,
-        train_nid,
-        sampler,
-        batch_size=b_size, # modified
-        shuffle=True,
-        drop_last=False,
-        num_workers=len(load_core), # modified
-        use_ddp = True) # newly added
-```
+6. Modify the ```dataloader``` function in the training function
+   ```
+   dataloader = dgl.dataloading.DataLoader(
+           g,
+           train_nid,
+           sampler,
+           batch_size=b_size, # modified
+           shuffle=True,
+           drop_last=False,
+           num_workers=len(load_core), # modified
+           use_ddp = True) # newly added
+   ```
 
-6. Enable core-binding function by adding enable_cpu_affinity() before the for loop, and also change the number of epoch into a variable. 
-```
-for epoch in range(args.num_epochs): #original for loop
-```
-```
-with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
-  for epoch in range(ep): # change num_epochs to ep
-```
+7. Enable core-binding by adding ```enable_cpu_affinity()``` before the training for-loop, and also change the number of epochs into the variable ```ep```: 
+   ```
+   with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
+     for epoch in range(ep): # change num_epochs to ep
+   ```
 
-7. Load the model before training, and save it afterwards.
-Original Program:
-```
-with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
-  for epoch in range(ep): 
-    ... # training operations
-```
-Modified:
-```
-PATH = "model.pt"
-if counter[0] != 0:
-  checkpoint = th.load(PATH)
-  model.load_state_dict(checkpoint['model_state_dict'])
-  optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-  epoch = checkpoint['epoch']
-  loss = checkpoint['loss']
-
-with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
-  for epoch in range(ep): 
-    ... # training operations
-
-dist.barrier()
-EPOCH = counter[0]
-LOSS = loss
-if rank == 0:
-  th.save({'epoch': EPOCH,
-              'model_state_dict': model.state_dict(),
-              'optimizer_state_dict': optimizer.state_dict(),
-              'loss': LOSS,
-              }, PATH)
-
-```
-8. Run example
-```
-python -W ignore <Your code>.py
-```
+8. Last step! Load the model before training and save it afterward.  
+   Original Program:
+   ```
+   with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
+     for epoch in range(ep): 
+       ... # training operations
+   ```
+   Modified:
+   ```
+   PATH = "model.pt"
+   if counter[0] != 0:
+     checkpoint = th.load(PATH)
+     model.load_state_dict(checkpoint['model_state_dict'])
+     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+     epoch = checkpoint['epoch']
+     loss = checkpoint['loss']
+   
+   with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
+     for epoch in range(ep): 
+       ... # training operations
+   
+   dist.barrier()
+   EPOCH = counter[0]
+   LOSS = loss
+   if rank == 0:
+     th.save({'epoch': EPOCH,
+                 'model_state_dict': model.state_dict(),
+                 'optimizer_state_dict': optimizer.state_dict(),
+                 'loss': LOSS,
+                 }, PATH)
+   
+   ```
+10. Done! You can now run your GNN program with ARGO enabled.
+   ```
+   python -W ignore <Your code>.py
+   ```
