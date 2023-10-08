@@ -14,7 +14,7 @@ While we use the Deep Graph Library (DGL) as an example here, ARGO is also compa
 ```shell
 git clone https://github.com/jasonlin316/ARGO.git
 ```
-Note: Anonymous GitHub does not support ```git clone```, sorry for the inconvenience.
+Note: Anonymous GitHub does not support ```git clone```, sorry for the inconvenience. 
 
 2. Download Anaconda and install
 ```shell
