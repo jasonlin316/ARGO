@@ -40,6 +40,12 @@ class ARGO:
         n_proc = x[0]
         n_samp = x[1]
         n_train = x[2] 
+        n_total = psutil.cpu_count(logical=False)
+
+        if n_proc*(n_samp+n_train) > n_total: #handling corner cases
+            n_proc = 2
+            n_samp = 2
+            n_train = (n_total//n_proc) - n_samp
 
         processes = []
         cnt = self.counter
