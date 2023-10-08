@@ -214,8 +214,7 @@ def train(args, device, data, rank, world_size, comp_core, load_core, counter, b
                         else 0
                     )
                     print(
-                        "Epoch {:05d} | Step {:05d} | Loss {:.4f} | Train Acc {:.4f} | Speed (samples/sec) {:.4f} | GPU {:.1f} MB".format(
-                            epoch,
+                        "Step {:05d} | Loss {:.4f} | Train Acc {:.4f} | Speed (samples/sec) {:.4f} | GPU {:.1f} MB".format(
                             step,
                             loss.item(),
                             acc.item(),
@@ -299,6 +298,6 @@ if __name__ == "__main__":
     os.environ['MASTER_ADDR'] = '127.0.0.1'
     os.environ['MASTER_PORT'] = '29501'
     mp.set_start_method('fork', force=True)
-    runtime = ARGO(n_search = 10, epoch = 20, batch_size = args.batch_size) #initialization
+    runtime = ARGO(n_search = 10, epoch = args.num_epochs, batch_size = args.batch_size) #initialization
     runtime.run(train, args=(args, device, data)) # wrap the training function
         

@@ -199,8 +199,7 @@ def train(args, device, data):
                     else 0
                 )
                 print(
-                    "Epoch {:05d} | Step {:05d} | Loss {:.4f} | Train Acc {:.4f} | Speed (samples/sec) {:.4f} | GPU {:.1f} MB".format(
-                        epoch,
+                    "Step {:05d} | Loss {:.4f} | Train Acc {:.4f} | Speed (samples/sec) {:.4f} | GPU {:.1f} MB".format(
                         step,
                         loss.item(),
                         acc.item(),
