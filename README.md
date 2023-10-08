@@ -11,46 +11,46 @@ While we use the Deep Graph Library (DGL) as an example here, ARGO is also compa
 
 1. Clone the repository:
 
-```shell
-git clone https://github.com/jasonlin316/ARGO.git
-```
+   ```shell
+   git clone https://github.com/jasonlin316/ARGO.git
+   ```
 Note: Anonymous GitHub does not support ```git clone```, sorry for the inconvenience. 
 
 2. Download Anaconda and install
-```shell
-wget https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh
-bash Anaconda3-2023.03-Linux-x86_64.sh
-```
+   ```shell
+   wget https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh
+   bash Anaconda3-2023.03-Linux-x86_64.sh
+   ```
 
 3. Create a virtual environment:
 
-```shell
-conda create -n py38 python=3.8.1
-```
+   ```shell
+   conda create -n py38 python=3.8.1
+   ```
 
 4. Active the virtual environment:
 
-```shell
-conda activate py38
-```
+   ```shell
+   conda activate py38
+   ```
 
 5. Install required packages:
 
-```shell
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
-conda install -c dglteam dgl
-conda install -c conda-forge ogb
-conda install -c conda-forge scikit-optimize
-```
+   ```shell
+   conda install pytorch torchvision torchaudio cpuonly -c pytorch
+   conda install -c dglteam dgl
+   conda install -c conda-forge ogb
+   conda install -c conda-forge scikit-optimize
+   ```
 Note: there exist a bug in the older version of the Scikit-Optimization library.  
 To fix the bug, find the "transformer.py" which should be located in  
    ```~/anaconda3/envs/py38/lib/python3.8/site-packages/skopt/space/transformers.py```  
 Once open the file, replace all ```np.int``` with ```int```.
 
 6. Download the OGB datasets (optional if you are not running any)
-```
-python ogb_example.py --dataset <ogb_dataset>
-```
+   ```shell
+   python ogb_example.py --dataset <ogb_dataset>
+   ```
 - Available choices [ogbn-products, ogbn-papers100M]  
 
 The program will ask if you want to download the dataset; please enter "y" for the program to proceed. You may terminate the program after the dataset is downloaded.
@@ -58,7 +58,7 @@ This extra step is not required for other datasets (e.g., reddit) because they w
 
 ## 2. Running the example GNN program
 ### Usage
-  ```
+  ```shell
   python main.py --dataset ogbn-products --sampler shadow --model sage
   ``` 
   Important Arguments: 
@@ -81,7 +81,7 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
 
 1. First, include all necessary packages on top of the file. Please place your file and ```argo.py``` in the same directory.
 
-   ```
+   ```python
    import os
    import torch.distributed as dist
    from torch.nn.parallel import DistributedDataParallel
@@ -91,7 +91,7 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
 
 2. Setup PyTorch Distributed Data Parallel (DDP). 
     1. Add the initialization function on top of the training program, and wrap the ```model``` with the DDP wrapper
-     ```
+     ```python
      def train(...):
        dist.init_process_group('gloo', rank=rank, world_size=world_size) # newly added
        model = SAGE(...) # original code
@@ -100,7 +100,7 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
      ```
     2. In the main program, add the following before launching the training function
     
-     ```
+     ```python
      os.environ['MASTER_ADDR'] = '127.0.0.1'
      os.environ['MASTER_PORT'] = '29501'
      mp.set_start_method('fork', force=True)
@@ -108,7 +108,7 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
      ```
 
 3. Enable ARGO by initializing the runtime system, and wrapping the training function
-   ```
+   ```python
    runtime = ARGO(n_search = 15, epoch = args.num_epochs, batch_size = args.batch_size) #initialization
    runtime.run(train, args=(args, device, data)) # wrap the training function
    ```
@@ -116,16 +116,16 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
 
 4. Modify the input of the training function, by directly adding ARGO parameters after the original inputs.
    This is the original function:
-   ```
+   ```python
    def train(args, device, data):
    ```
    Add ```rank, world_size, comp_core, load_core, counter, b_size, ep``` like this:
-   ```
+   ```python
    def train(args, device, data, rank, world_size, comp_core, load_core, counter, b_size, ep):
    ```
 
 6. Modify the ```dataloader``` function in the training function
-   ```
+   ```python
    dataloader = dgl.dataloading.DataLoader(
            g,
            train_nid,
@@ -138,20 +138,20 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
    ```
 
 7. Enable core-binding by adding ```enable_cpu_affinity()``` before the training for-loop, and also change the number of epochs into the variable ```ep```: 
-   ```
+   ```python
    with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
      for epoch in range(ep): # change num_epochs to ep
    ```
 
 8. Last step! Load the model before training and save it afterward.  
    Original Program:
-   ```
+   ```python
    with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
      for epoch in range(ep): 
        ... # training operations
    ```
    Modified:
-   ```
+   ```python
    PATH = "model.pt"
    if counter[0] != 0:
      checkpoint = th.load(PATH)
@@ -174,6 +174,6 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
    
    ```
 10. Done! You can now run your GNN program with ARGO enabled.
-   ```
-   python -W ignore <Your code>.py
-   ```
+      ```shell
+      python -W ignore <your_code>.py
+      ```
