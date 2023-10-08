@@ -164,13 +164,11 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
        ... # training operations
    
    dist.barrier()
-   EPOCH = counter[0]
-   LOSS = loss
    if rank == 0:
-     th.save({'epoch': EPOCH,
+     th.save({'epoch': counter[0],
                  'model_state_dict': model.state_dict(),
                  'optimizer_state_dict': optimizer.state_dict(),
-                 'loss': LOSS,
+                 'loss': loss,
                  }, PATH)
    
    ```
