@@ -133,7 +133,8 @@ def train(args, g, data, rank, world_size, comp_core, load_core, counter, b_size
         batch_size=b_size,
         drop_last=drop_last,
         shuffle=shuffle,
-        num_workers=num_of_samplers
+        num_workers=num_of_samplers,
+        use_ddp = True
     )
 
     # training loop
