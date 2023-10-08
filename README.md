@@ -112,8 +112,7 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
    runtime = ARGO(n_search = 15, epoch = args.num_epochs, batch_size = args.batch_size) #initialization
    runtime.run(train, args=(args, device, data)) # wrap the training function
    ```
-   ARGO takes three input paramters: number of searches ```n_search```, number of epochs, and the mini-batch size. Increasing ```n_search``` potentially leads to a better configuration with less epoch time; however, searching itself also causes extra overhead. We recommend setting ```n_search``` from 15 to 45 for an optimal overall performance.  
-   Details of ```n_search``` can be found in the paper.
+   ARGO takes three input paramters: number of searches ```n_search```, number of epochs, and the mini-batch size. Increasing ```n_search``` potentially leads to a better configuration with less epoch time; however, searching itself also causes extra overhead. We recommend setting ```n_search``` from 15 to 45 for an optimal overall performance. Details of ```n_search``` can be found in the paper.
 
 4. Modify the input of the training function, by directly adding ARGO parameters after the original inputs.
    This is the original function:
