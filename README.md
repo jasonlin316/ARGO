@@ -45,7 +45,7 @@ Note: Anonymous GitHub does not support ```git clone```, sorry for the inconveni
 Note: there exist a bug in the older version of the Scikit-Optimization library.  
 To fix the bug, find the "transformer.py" which should be located in  
    ```~/anaconda3/envs/py38/lib/python3.8/site-packages/skopt/space/transformers.py```  
-Once open the file, replace all ```np.int``` with ```int```.
+Once open the file, replace all ```np.int_``` with ```int```.
 
 6. Download the OGB datasets (optional if you are not running any)
    ```shell
