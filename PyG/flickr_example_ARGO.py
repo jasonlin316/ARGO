@@ -6,7 +6,7 @@ from torch_geometric.loader import NeighborLoader
 from torch_geometric.nn import SAGEConv, GCNConv
 from torch_geometric.datasets import Flickr
 
-# Step1. include necessary packages
+# Step 1. include necessary packages
 import os
 import subprocess
 import torch.distributed as dist
@@ -16,7 +16,7 @@ import torch.multiprocessing as mp
 from argo import ARGO
 
 
-# Step2. Add `get_mask` function for `taskset` core binding
+# Step 2. Add `get_mask` function for `taskset` core binding
 # replace node_index with node_mask
 def get_mask(comp_core):
     mask = 0
@@ -55,16 +55,16 @@ class GNN(torch.nn.Module):
         return x
 
 # Training function
-# Step5. Modify the input parameters of the training function
+# 5. Modify the input parameters of the training function
 def train(args, device, data, rank, world_size, comp_core, load_core, counter, b_size, ep): 
-    # Step3.1. Setup PyTorch Distributed Data Parallel (DDP)
+    # 3.1. Setup PyTorch Distributed Data Parallel (DDP)
     dist.init_process_group('gloo', rank=rank, world_size=world_size) # newly added
     model = GNN(dataset.num_features, 128, dataset.num_classes, num_layers=3, model_name=model_name)
     model = DistributedDataParallel(model) # newly added
     model = model.to(device)
     train_idx = split_idx['train'].to(device)
     model.train()
-    # Step6. modify the dataloader and add DistributedSampler
+    # 6. modify the dataloader and add DistributedSampler
     # Add DistributedSampler for multi-thread data loading
     train_sampler = DistributedSampler(
             train_idx,
@@ -82,13 +82,13 @@ def train(args, device, data, rank, world_size, comp_core, load_core, counter, b
     )
     optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
      
-    #Step8. Use `taskset` to bind trainer-core
+    #8. Use `taskset` to bind trainer-core
     torch.set_num_threads(len(comp_core))
     pid = os.getpid()
     core_mask = get_mask(comp_core)
     subprocess.run(["taskset", "-a","-p", str(core_mask), str(pid)])
 
-    # Step10. Load the model before training and save it afterward
+    # 10. Load the model before training and save it afterward
     PATH = "PyG/model.pt"
     if counter[0] != 0:
         checkpoint = torch.load(PATH)
@@ -97,11 +97,11 @@ def train(args, device, data, rank, world_size, comp_core, load_core, counter, b
         epoch = checkpoint['epoch']
         loss = checkpoint['loss']
 
-    #Step7. Change the number of epochs
+    #7. Change the number of epochs
     for epoch in range(ep): # change num_epochs to ep
         total_loss = total_correct = total_cnt =  0
         
-        # Step9. Set loader cores affinity
+        # 9. Set loader cores affinity
         with train_loader.enable_cpu_affinity(loader_cores = load_core): # set loader cores
             for batch in train_loader:
                 optimizer.zero_grad()
@@ -145,12 +145,12 @@ if __name__ == '__main__':
     split_idx = get_split_idx(dataset[0].train_mask, dataset[0].val_mask, dataset[0].test_mask) 
     data = dataset[0].to(device, 'x', 'y')
     
-    # Step3.2.Setup the mp environment
+    # Step 3.2.Setup the mp environment
     os.environ['MASTER_ADDR'] = '127.0.0.1'
     os.environ['MASTER_PORT'] = '29501'
     mp.set_start_method('fork', force=True)
 
-    # Step4.Enable ARGO by initializing the runtime system, and wrapping the training function
+    # Step 4.Enable ARGO by initializing the runtime system, and wrapping the training function
     runtime = ARGO(n_search = 15, epoch = args.num_epochs, batch_size = args.batch_size) #initialization
     runtime.run(train, args=(args, device, data)) # wrap the training function
 
