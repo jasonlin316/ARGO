@@ -5,7 +5,7 @@ This README includes how to:
 2. [Run the example code](#2-running-the-example-GNN-program)
 3. [Modify your own GNN program to enable ARGO.](#3-enabling-ARGO-on-your-own-GNN-program)
 
-While we use the Deep Graph Library (DGL) as an example here, ARGO is also compatible with PyTorch-Geometric (PyG) and details can be found in the PyG folder.
+While we use the Deep Graph Library (DGL) as an example here, ARGO is also compatible with PyTorch-Geometric (PyG); details can be found in the PyG folder.
 
 ## 1. Setting up the environment
 
@@ -42,7 +42,7 @@ Note: Anonymous GitHub does not support ```git clone```, sorry for the inconveni
    conda install -c conda-forge ogb
    conda install -c conda-forge scikit-optimize
    ```
-Note: there exist a bug in the older version of the Scikit-Optimization library.  
+>  Note: there exist a bug in the older version (before v0.9.0) of the Scikit-Optimization library.  
 To fix the bug, find the "transformer.py" which should be located in  
    ```~/anaconda3/envs/py38/lib/python3.8/site-packages/skopt/space/transformers.py```  
 Once open the file, replace all ```np.int_``` with ```int```.
@@ -53,8 +53,8 @@ Once open the file, replace all ```np.int_``` with ```int```.
    ```
 - Available choices [ogbn-products, ogbn-papers100M]  
 
-The program will ask if you want to download the dataset; please enter "y" for the program to proceed. You may terminate the program after the dataset is downloaded.
-This extra step is not required for other datasets (e.g., reddit) because they will download automatically. 
+   The program will ask if you want to download the dataset; please enter "y" for the program to proceed. You may terminate the program after the dataset is downloaded.
+   This extra step is not required for other datasets (e.g., reddit) because they will download automatically. 
 
 ## 2. Running the example GNN program
 ### Usage
@@ -69,7 +69,7 @@ This extra step is not required for other datasets (e.g., reddit) because they w
   - `--hidden`: hidden feature dimension.
   - `--batch_size`: the size of the mini-batch.
 
-Note: the default number of layer is 3. If you want to change the number of layers for the Neighbor Sampler, please update the sample size in ```line 114```.
+>  Note: the default number of layer is 3. If you want to change the number of layers for the Neighbor Sampler, please update the sample size in ```line 114```.
 
 
 
@@ -77,7 +77,7 @@ Note: the default number of layer is 3. If you want to change the number of laye
 
 In this section, we provide a step-by-step tutorial on how to enable ARGO on a DGL program. We use the ```ogb_example.py``` file in this repo as an example.  
 
-Note: we also provide the complete example file ```ogb_example_ARGO.py``` which followed the steps below to enable ARGO on ```ogb_example.py```.
+>  Note: we also provide the complete example file ```ogb_example_ARGO.py``` which followed the steps below to enable ARGO on ```ogb_example.py```.
 
 1. First, include all necessary packages on top of the file. Please place your file and ```argo.py``` in the same directory.
 
@@ -112,7 +112,7 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
    runtime = ARGO(n_search = 15, epoch = args.num_epochs, batch_size = args.batch_size) #initialization
    runtime.run(train, args=(args, device, data)) # wrap the training function
    ```
-   ARGO takes three input paramters: number of searches ```n_search```, number of epochs, and the mini-batch size. Increasing ```n_search``` potentially leads to a better configuration with less epoch time; however, searching itself also causes extra overhead. We recommend setting ```n_search``` from 15 to 45 for an optimal overall performance. Details of ```n_search``` can be found in the paper.
+   >  ARGO takes three input paramters: number of searches ```n_search```, number of epochs, and the mini-batch size. Increasing ```n_search``` potentially leads to a better configuration with less epoch time; however, searching itself also causes extra overhead. We recommend setting ```n_search``` from 15 to 45 for an optimal overall performance. Details of ```n_search``` can be found in the paper.
 
 4. Modify the input of the training function, by directly adding ARGO parameters after the original inputs.
    This is the original function:
@@ -124,7 +124,7 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
    def train(args, device, data, rank, world_size, comp_core, load_core, counter, b_size, ep):
    ```
 
-6. Modify the ```dataloader``` function in the training function
+5. Modify the ```dataloader``` function in the training function
    ```python
    dataloader = dgl.dataloading.DataLoader(
            g,
@@ -137,13 +137,13 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
            use_ddp = True) # newly added
    ```
 
-7. Enable core-binding by adding ```enable_cpu_affinity()``` before the training for-loop, and also change the number of epochs into the variable ```ep```: 
+6. Enable core-binding by adding ```enable_cpu_affinity()``` before the training for-loop, and also change the number of epochs into the variable ```ep```: 
    ```python
    with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
      for epoch in range(ep): # change num_epochs to ep
    ```
 
-8. Last step! Load the model before training and save it afterward.  
+7. Last step! Load the model before training and save it afterward.  
    Original Program:
    ```python
    with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
@@ -173,7 +173,7 @@ Note: we also provide the complete example file ```ogb_example_ARGO.py``` which 
                  }, PATH)
    
    ```
-10. Done! You can now run your GNN program with ARGO enabled.
+8. Done! You can now run your GNN program with ARGO enabled.
       ```shell
       python -W ignore <your_code>.py
       ```
