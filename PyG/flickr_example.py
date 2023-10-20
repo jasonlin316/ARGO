@@ -71,7 +71,7 @@ def train(args, device, data):
             y = batch.y[:batch.batch_size].squeeze().long()
             loss = F.cross_entropy(out, y)
             loss.backward()
-            optimizer.Step ()
+            optimizer.step()
             total_loss += float(loss)   
             total_correct += int(out.argmax(dim=-1).eq(y).sum())
             total_cnt += batch.batch_size
