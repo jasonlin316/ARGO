@@ -6,9 +6,9 @@ from torch_geometric.loader import NeighborLoader
 from torch_geometric.nn import SAGEConv, GCNConv
 from torch_geometric.datasets import Flickr
 
-# Step1. include necessary packages
+# Step 1. include necessary packages
 
-# Step2. Add `get_mask` function for `taskset` core binding
+# Step 2. Add `get_mask` function for `taskset` core binding
 # GNN model
 class GNN(torch.nn.Module):
     def __init__(self, in_channels, hidden_channels, out_channels, num_layers, model_name):
@@ -40,14 +40,14 @@ class GNN(torch.nn.Module):
         return x
 
 # Training function
-# Step5. Modify the input parameters of the training function
+# Step 5. Modify the input parameters of the training function
 def train(args, device, data): 
-    # Step3.1. Setup PyTorch Distributed Data Parallel (DDP)
+    # Step 3.1. Setup PyTorch Distributed Data Parallel (DDP)
     model = GNN(dataset.num_features, 128, dataset.num_classes, num_layers=3, model_name=model_name)
     model = model.to(device)
     train_idx = split_idx['train'].to(device)
     model.train()
-    # Step6. modify the dataloader and add DistributedSampler
+    # Step 6. modify the dataloader and add DistributedSampler
     train_loader = NeighborLoader(
         data,
         input_nodes = train_idx,
@@ -57,21 +57,21 @@ def train(args, device, data):
         persistent_workers=True,
     )
     optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
-    #Step8. Use `taskset` to bind trainer-core
-    # Step10. Load the model before training and save it afterward
+    #Step 8. Use `taskset` to bind trainer-core
+    # Step 10. Load the model before training and save it afterward
     
-    #Step7. Change the number of epochs
+    #Step 7. Change the number of epochs
     for epoch in range(args.num_epochs):
         
         total_loss = total_correct = total_cnt =  0
-        # Step9. Set loader cores affinity
+        # Step 9. Set loader cores affinity
         for batch in train_loader:
             optimizer.zero_grad()
             out = model(batch.x, batch.edge_index)[:batch.batch_size]
             y = batch.y[:batch.batch_size].squeeze().long()
             loss = F.cross_entropy(out, y)
             loss.backward()
-            optimizer.step()
+            optimizer.Step ()
             total_loss += float(loss)   
             total_correct += int(out.argmax(dim=-1).eq(y).sum())
             total_cnt += batch.batch_size
@@ -99,9 +99,9 @@ if __name__ == '__main__':
     dataset = Flickr(root='dataset')
     split_idx = get_split_idx(dataset[0].train_mask, dataset[0].val_mask, dataset[0].test_mask) 
     data = dataset[0].to(device, 'x', 'y')
-    # Step3.2.Setup the mp environment
+    # Step 3.2.Setup the mp environment
     
-    # Step4.Enable ARGO by initializing the runtime system, and wrapping the training function
+    # Step 4.Enable ARGO by initializing the runtime system, and wrapping the training function
     train(args, device, data)
     
 
