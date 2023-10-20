@@ -1,6 +1,6 @@
 # ARGO for PyTorch-Geometric
 
-We also implemented ARGO for PyG users. Dgl and PyG share the same ARGO runtime, but their environment configuration and training code implementation are different.
+DGL and PyG can both use ARGO, but their setup is slightly different.
 
 This README includes how to:
 
@@ -79,7 +79,7 @@ python PyG/main.py --dataset ogbn-products --sampler shadow --model sage
 
 ## 3. Enable ARGO on your own PyG-GNN program
 
-In this section, we provide a step-by-step tutorial on how to enable ARGO on a PyG program. We use the ```flickr_example.py``` file in `PyG` folder as an example.  ARGO is designed to accelerate the training process, so this is a very streamlined code implementation for training GNN on the `flickr` data set. It only has model configuration and training steps, and does not implement inference and verification functions.
+In this section, we provide a step-by-step tutorial on how to enable ARGO on a PyG program. We use the ```flickr_example.py``` file in `PyG` folder as an example.  
 
 >  Note: we also provide the complete example file ```flickr_example_ARGO.py``` which followed the steps below to enable ARGO on ```flickr_example.py```.
 
