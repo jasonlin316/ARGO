@@ -6,7 +6,7 @@ This README includes how to:
 
 1. [Set up the PyG environment](#1-setting-up-the-environment)
 2. [Run the example code](#2-running-the-example-PyG-GNN-program)
-3. [Modify your own PyG-GNN program to enable ARGO.](#3-10-steps-to-enable-ARGO-on-your-own-PyG-GNN-program)
+3. [Modify your own PyG-GNN program to enable ARGO.](#3-enable-ARGO-on-your-own-PyG-GNN-program)
 
 ## 1. Setting up the environment
 
@@ -40,7 +40,7 @@ This README includes how to:
    conda activate GNN
    ```
 
-5. Note: there exist a bug in the older version of the Scikit-Optimization library.  
+5. Note: there exists a bug in the older version (before v0.9.0) of the Scikit-Optimization library. 
    To fix the bug, find the "transformer.py" which should be located in  
    ```~/anaconda3/envs/py38/lib/python3.8/site-packages/skopt/space/transformers.py```  
    Once open the file, replace all ```np.int``` with ```int```.
@@ -73,11 +73,11 @@ python PyG/main.py --dataset ogbn-products --sampler shadow --model sage
   - `--hidden`: hidden feature dimension.
   - `--batch_size`: the size of the mini-batch.
 
-Note: the default number of layer is 3. If you want to change the number of layers for the Neighbor Sampler, please update the sample size in ```line 137 of PyG/main.py```.
+>  Note: the default number of layer is 3. If you want to change the number of layers for the Neighbor Sampler, please update the sample size in ```line 137 of PyG/main.py```.
 
 
 
-## 3. 10 Steps to enable ARGO on your own PyG-GNN program
+## 3. Enable ARGO on your own PyG-GNN program
 
 In this section, we provide a step-by-step tutorial on how to enable ARGO on a PyG program. We use the ```flickr_example.py``` file in `PyG` folder as an example.  ARGO is designed to accelerate the training process, so this is a very streamlined code implementation for training GNN on the `flickr` data set. It only has model configuration and training steps, and does not implement inference and verification functions.
 
@@ -97,13 +97,13 @@ In this section, we provide a step-by-step tutorial on how to enable ARGO on a P
 
 2.  Add `get_mask` function for `taskset` core binding
 
-   ```python
-   def get_mask(comp_core):
-       mask = 0
-       for core in comp_core:
-           mask += 2 ** core
-       return hex(mask)
-   ```
+      ```python
+      def get_mask(comp_core):
+          mask = 0
+          for core in comp_core:
+              mask += 2 ** core
+          return hex(mask)
+      ```
 
 3. Setup PyTorch Distributed Data Parallel (DDP). 
 
@@ -133,7 +133,7 @@ In this section, we provide a step-by-step tutorial on how to enable ARGO on a P
    runtime.run(train, args=(args, device, data)) # wrap the training function
    ```
 
-   ARGO takes three input paramters: number of searches ```n_search```, number of epochs, and the mini-batch size. Increasing ```n_search``` potentially leads to a better configuration with less epoch time; however, searching itself also causes extra overhead. We recommend setting ```n_search``` from 15 to 45 for an optimal overall performance. Details of ```n_search``` can be found in the paper.
+>  ARGO takes three input paramters: number of searches ```n_search```, number of epochs, and the mini-batch size. Increasing ```n_search``` potentially leads to a better configuration with less epoch time; however, searching itself also causes extra overhead. We recommend setting ```n_search``` from 15 to 45 for an optimal overall performance. Details of ```n_search``` can be found in the paper.
 
 5. Modify the input of the training function, by directly adding ARGO parameters after the original inputs.
    This is the original function:
@@ -199,11 +199,11 @@ In this section, we provide a step-by-step tutorial on how to enable ARGO on a P
     Original Program:
 
     ```python
-    #TODO: 7. Change the number of epochs
+    # Step 7. Change the number of epochs
         for epoch in range(ep): # change num_epochs to ep
             total_loss = total_correct = total_cnt =  0
             
-            # TODO: 9. Set loader cores affinity
+            # Step 9. Set loader cores affinity
             with train_loader.enable_cpu_affinity(loader_cores = load_core): # set loader cores
         ... # training operations
     ```
@@ -211,7 +211,7 @@ In this section, we provide a step-by-step tutorial on how to enable ARGO on a P
     Modified:
 
     ```python
-    # TODO: 10. Load the model before training and save it afterward
+    # Step 10. Load the model before training and save it afterward
         PATH = "PyG/model.pt"
         if counter[0] != 0:
             checkpoint = torch.load(PATH)
@@ -220,11 +220,11 @@ In this section, we provide a step-by-step tutorial on how to enable ARGO on a P
             epoch = checkpoint['epoch']
             loss = checkpoint['loss']
     
-        #TODO: 7. Change the number of epochs
+        # Step 7. Change the number of epochs
         for epoch in range(ep): # change num_epochs to ep
             total_loss = total_correct = total_cnt =  0
             
-            # TODO: 9. Set loader cores affinity
+            # Step 9. Set loader cores affinity
             with train_loader.enable_cpu_affinity(loader_cores = load_core): # set loader cores
                 for batch in train_loader:
                    ... # training operations
