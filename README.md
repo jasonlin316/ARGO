@@ -7,7 +7,7 @@ Distributed Processing Symposium (IPDPS).
 
 Graph Neural Network (GNN) training suffer from low scalability on multi-core processors. ARGO is a runtime system that can be seamlessly integrated into DGL or PyG, and offers scalable performance. 
 Shown in the figure below, both PyG and DGL cannot achieve higher performance after applying more than 16 cores. However, with ARGO enabled, both libraries are able to scale over 64 cores, achieveing higher training performance than the original design.
-
+![ARGO](https://github.com/jasonlin316/ARGO/blob/main/argo_scale.pdf)
 
 
 
