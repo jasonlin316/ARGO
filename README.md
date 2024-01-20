@@ -1,7 +1,7 @@
 # ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor
 
 Official implementation of "ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor," from IEEE International Parallel &
-Distributed Processing Symposium (IPDPS).
+Distributed Processing Symposium (IPDPS), 2024.
 
 ## Overview
 
@@ -16,7 +16,7 @@ This README includes how to:
 2. [Run the example code](#2-running-the-example-GNN-program)
 3. [Modify your own GNN program to enable ARGO.](#3-enabling-ARGO-on-your-own-GNN-program)
 
-Here we use the Deep Graph Library (DGL) as an example. ARGO is also compatible with PyTorch-Geometric (PyG); please see the PyG folder.
+Here we use the Deep Graph Library (DGL) as an example. ARGO is also compatible with PyTorch-Geometric (PyG); please see the PyG folder for details.
 
 ## 1. Setting up the environment
 
