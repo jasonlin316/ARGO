@@ -1,11 +1,22 @@
 # ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor
 
+Official implementation of "ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor," from IEEE International Parallel &
+Distributed Processing Symposium (IPDPS).
+
+## Overview
+
+Graph Neural Network (GNN) training suffer from low scalability on multi-core processors. ARGO is a runtime system that can be seamlessly integrated into DGL or PyG, and offers scalable performance. 
+Shown in the figure below, both PyG and DGL cannot achieve higher performance after applying more than 16 cores. However, with ARGO enabled, both libraries are able to scale over 64 cores, achieveing higher training performance than the original design.
+
+
+
+
 This README includes how to:
 1. [Set up the environment](#1-setting-up-the-environment)
 2. [Run the example code](#2-running-the-example-GNN-program)
 3. [Modify your own GNN program to enable ARGO.](#3-enabling-ARGO-on-your-own-GNN-program)
 
-While we use the Deep Graph Library (DGL) as an example here, ARGO is also compatible with PyTorch-Geometric (PyG); details can be found in the PyG folder.
+Here we use the Deep Graph Library (DGL) as an example. ARGO is also compatible with PyTorch-Geometric (PyG); please see the PyG folder.
 
 ## 1. Setting up the environment
 
@@ -14,7 +25,6 @@ While we use the Deep Graph Library (DGL) as an example here, ARGO is also compa
    ```shell
    git clone https://github.com/jasonlin316/ARGO.git
    ```
-Note: Anonymous GitHub does not support ```git clone```, sorry for the inconvenience. 
 
 2. Download Anaconda and install
    ```shell
