@@ -195,6 +195,5 @@ This work has been supported by the U.S. National Science Foundation (NSF) under
   author={Yi-Chien Lin and Yuyang Chen and Sameh Gobriel and Nilesh Jain and Gopi Krishna Jhaand and Viktor Prasanna},
   booktitle={IEEE International Parallel \& Distributed Processing Symposium (IPDPS)}, 
   title={ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor}, 
-  year={2024},
-  doi={}}
+  year={2024}}
 ```
