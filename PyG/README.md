@@ -242,5 +242,15 @@ In this section, we provide a step-by-step tutorial on how to enable ARGO on a P
 11. Done! You can now run your GNN program with ARGO enabled.
 
       ```shell
-    python -W ignore PyG/<your_code>.py
+    python PyG/<your_code>.py
       ```
+
+## Citation & Acknowledgement
+This work has been supported by the U.S. National Science Foundation (NSF) under grants CCF-1919289/SPX-2333009, CNS-2009057 and OAC-2209563, and the Semiconductor Research Corporation (SRC).
+```
+@INPROCEEDINGS{argo-ipdps24,
+  author={Yi-Chien Lin and Yuyang Chen and Sameh Gobriel and Nilesh Jain and Gopi Krishna Jhaand and Viktor Prasanna},
+  booktitle={IEEE International Parallel and Distributed Processing Symposium (IPDPS)}, 
+  title={ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor}, 
+  year={2024}}
+```
