@@ -1,7 +1,9 @@
-# ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor
+# ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor 
+
+[![DOI](https://zenodo.org/badge/638018037.svg)](https://zenodo.org/doi/10.5281/zenodo.10967053)
 
 Official implementation of "ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor," from IEEE International Parallel and
-Distributed Processing Symposium (IPDPS), 2024.
+Distributed Processing Symposium (IPDPS), 2024. 
 
 ## Overview
 
