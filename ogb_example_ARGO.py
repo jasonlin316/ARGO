@@ -1,26 +1,32 @@
-'''
-Disclaimer: we do not write or own this code. 
-This file is an official example from DGL: https://github.com/dmlc/dgl/blob/master/examples/pytorch/ogb/ogbn-products/graphsage/main.py
-'''
+"""
+This is a modified version of: https://github.com/dmlc/dgl/blob/master/examples/pytorch/ogb/ogbn-products/graphsage/main.py
+This example shows how to enable ARGO to automatically instantiate multi-processing and adjust CPU core assignment to achieve better performance.
+"""
 
 import argparse
+
+import ctypes
+import os
 import time
+from multiprocessing import RawValue
 
 import dgl
 import dgl.nn.pytorch as dglnn
 
 import numpy as np
 import torch as th
+import torch.distributed as dist
+import torch.multiprocessing as mp
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 import tqdm
-from ogb.nodeproppred import DglNodePropPredDataset
-import os
-import torch.distributed as dist
-from torch.nn.parallel import DistributedDataParallel
-import torch.multiprocessing as mp
 from argo import ARGO
+from ogb.nodeproppred import DglNodePropPredDataset
+from torch.nn.parallel import DistributedDataParallel
+
+avg_total = RawValue(ctypes.c_float, 0.0)
+
 
 class SAGE(nn.Module):
     def __init__(
@@ -84,7 +90,9 @@ class SAGE(nn.Module):
                 num_workers=args.num_workers,
             )
 
-            for input_nodes, output_nodes, blocks in tqdm.tqdm(dataloader):
+            for input_nodes, output_nodes, blocks in tqdm.tqdm(
+                dataloader, disable=None
+            ):
                 block = blocks[0].int().to(device)
 
                 h = x[input_nodes]
@@ -118,7 +126,7 @@ def evaluate(model, g, nfeat, labels, val_nid, test_nid, device):
     """
     model.eval()
     with th.no_grad():
-        pred = model.inference(g, nfeat, device)
+        pred = model.module.inference(g, nfeat, device)
     model.train()
     return (
         compute_acc(pred[val_nid], labels[val_nid]),
@@ -137,8 +145,19 @@ def load_subtensor(nfeat, labels, seeds, input_nodes):
 
 
 #### Entry point
-def train(args, device, data, rank, world_size, comp_core, load_core, counter, b_size, ep):
-    dist.init_process_group('gloo', rank=rank, world_size=world_size) 
+def train(
+    args,
+    device,
+    data,
+    rank,
+    world_size,
+    comp_core,
+    load_core,
+    counter,
+    b_size,
+    ep,
+):
+    dist.init_process_group("gloo", rank=rank, world_size=world_size)
     # Unpack data
     train_nid, val_nid, test_nid, in_feats, labels, n_classes, nfeat, g = data
 
@@ -154,7 +173,7 @@ def train(args, device, data, rank, world_size, comp_core, load_core, counter, b
         shuffle=True,
         drop_last=False,
         num_workers=len(load_core),
-        use_ddp = True
+        use_ddp=True,
     )
 
     # Define model and optimizer
@@ -172,16 +191,21 @@ def train(args, device, data, rank, world_size, comp_core, load_core, counter, b
     optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.wd)
 
     # Training loop
+    avg = 0
     iter_tput = []
+    best_eval_acc = 0
     best_test_acc = 0
     PATH = "model.pt"
     if counter[0] != 0:
         checkpoint = th.load(PATH)
-        model.load_state_dict(checkpoint['model_state_dict'])
-        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-        epoch = checkpoint['epoch']
-        loss = checkpoint['loss']
-    with dataloader.enable_cpu_affinity(loader_cores=load_core, compute_cores=comp_core): 
+        model.load_state_dict(checkpoint["model_state_dict"])
+        optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+        epoch = checkpoint["epoch"]
+        loss = checkpoint["loss"]
+
+    with dataloader.enable_cpu_affinity(
+        loader_cores=load_core, compute_cores=comp_core
+    ):
         for epoch in range(ep):
             tic = time.time()
 
@@ -206,34 +230,65 @@ def train(args, device, data, rank, world_size, comp_core, load_core, counter, b
                 optimizer.step()
 
                 iter_tput.append(len(seeds) / (time.time() - tic_step))
-                if step % args.log_every == 0:
+                if step % args.log_every == 0 and step != 0:
                     acc = compute_acc(batch_pred, batch_labels)
-                    gpu_mem_alloc = (
-                        th.cuda.max_memory_allocated() / 1000000
-                        if th.cuda.is_available()
-                        else 0
-                    )
                     print(
-                        "Step {:05d} | Loss {:.4f} | Train Acc {:.4f} | Speed (samples/sec) {:.4f} | GPU {:.1f} MB".format(
+                        "Step {:05d} | Loss {:.4f} | Train Acc {:.4f} | Speed (samples/sec) {:.4f}".format(
                             step,
                             loss.item(),
                             acc.item(),
                             np.mean(iter_tput[3:]),
-                            gpu_mem_alloc,
                         )
                     )
 
             toc = time.time()
             print("Epoch Time(s): {:.4f}".format(toc - tic))
+
+            if rank == 0:
+                global avg_total
+                avg_total.value += toc - tic
+                avg += toc - tic
+
+                if epoch % args.eval_every == 0 and epoch != 0:
+                    eval_acc, test_acc, pred = evaluate(
+                        model, g, nfeat, labels, val_nid, test_nid, device
+                    )
+                    if args.save_pred:
+                        np.savetxt(
+                            args.save_pred + "%02d" % epoch,
+                            pred.argmax(1).cpu().numpy(),
+                            "%d",
+                        )
+                    print("Eval Acc {:.4f}".format(eval_acc))
+                    if eval_acc > best_eval_acc:
+                        best_eval_acc = eval_acc
+                        best_test_acc = test_acc
+                    print(
+                        "Best Eval Acc {:.4f} Test Acc {:.4f}".format(
+                            best_eval_acc, best_test_acc
+                        )
+                    )
+
     dist.barrier()
     if rank == 0:
-        th.save({'epoch': counter[0],
-                    'model_state_dict': model.state_dict(),
-                    'optimizer_state_dict': optimizer.state_dict(),
-                    'loss': loss,
-                    }, PATH)
-    return best_test_acc
+        th.save(
+            {
+                "epoch": counter[0],
+                "model_state_dict": model.state_dict(),
+                "optimizer_state_dict": optimizer.state_dict(),
+                "loss": loss,
+            },
+            PATH,
+        )
+        if args.num_epochs == counter[0] + epoch + 1:
+            print(
+                "Avg epoch time: {}".format(avg_total.value / args.num_epochs)
+            )
+            print(
+                "Avg epoch time after auto-tuning: {}".format(avg / (epoch + 1))
+            )
 
+    return best_test_acc
 
 
 if __name__ == "__main__":
@@ -254,7 +309,12 @@ if __name__ == "__main__":
     argparser.add_argument("--eval-every", type=int, default=1)
     argparser.add_argument("--lr", type=float, default=0.003)
     argparser.add_argument("--dropout", type=float, default=0.5)
-    argparser.add_argument("--dataset", type=str, default="ogbn-products", choices= ["ogbn-papers100M", "ogbn-products"])
+    argparser.add_argument(
+        "--dataset",
+        type=str,
+        default="ogbn-products",
+        choices=["ogbn-papers100M", "ogbn-products"],
+    )
     argparser.add_argument(
         "--num-workers",
         type=int,
@@ -295,9 +355,10 @@ if __name__ == "__main__":
         nfeat,
         graph,
     )
-    os.environ['MASTER_ADDR'] = '127.0.0.1'
-    os.environ['MASTER_PORT'] = '29501'
-    mp.set_start_method('fork', force=True)
-    runtime = ARGO(n_search = 15, epoch = args.num_epochs, batch_size = args.batch_size) #initialization
-    runtime.run(train, args=(args, device, data)) # wrap the training function
-        
+    os.environ["MASTER_ADDR"] = "127.0.0.1"
+    os.environ["MASTER_PORT"] = "29501"
+    mp.set_start_method("fork", force=True)
+    runtime = ARGO(
+        n_search=15, epoch=args.num_epochs, batch_size=args.batch_size
+    )  # initialization
+    runtime.run(train, args=(args, device, data))  # wrap the training function

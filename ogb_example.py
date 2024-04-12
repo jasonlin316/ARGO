@@ -1,7 +1,6 @@
-'''
-Disclaimer: we did not write or own this code. 
-This file is an official example from DGL: https://github.com/dmlc/dgl/blob/master/examples/pytorch/ogb/ogbn-products/graphsage/main.py
-'''
+"""
+This is modified version of: https://github.com/dmlc/dgl/blob/master/examples/pytorch/ogb/ogbn-products/graphsage/main.py
+"""
 
 import argparse
 import time
@@ -80,7 +79,9 @@ class SAGE(nn.Module):
                 num_workers=args.num_workers,
             )
 
-            for input_nodes, output_nodes, blocks in tqdm.tqdm(dataloader):
+            for input_nodes, output_nodes, blocks in tqdm.tqdm(
+                dataloader, disable=None
+            ):
                 block = blocks[0].int().to(device)
 
                 h = x[input_nodes]
@@ -165,52 +166,70 @@ def train(args, device, data):
     optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.wd)
 
     # Training loop
+    avg = 0
     iter_tput = []
+    best_eval_acc = 0
     best_test_acc = 0
-    for epoch in range(args.num_epochs):
-        tic = time.time()
+    with dataloader.enable_cpu_affinity():
+        for epoch in range(args.num_epochs):
+            tic = time.time()
 
-        # Loop over the dataloader to sample the computation dependency graph as a list of
-        # blocks.
-        for step, (input_nodes, seeds, blocks) in enumerate(dataloader):
-            tic_step = time.time()
+            # Loop over the dataloader to sample the computation dependency graph as a list of
+            # blocks.
+            for step, (input_nodes, seeds, blocks) in enumerate(dataloader):
+                tic_step = time.time()
 
-            # copy block to gpu
-            blocks = [blk.int().to(device) for blk in blocks]
+                # copy block to gpu
+                blocks = [blk.int().to(device) for blk in blocks]
 
-            # Load the input features as well as output labels
-            batch_inputs, batch_labels = load_subtensor(
-                nfeat, labels, seeds, input_nodes
-            )
-
-            # Compute loss and prediction
-            batch_pred = model(blocks, batch_inputs)
-            loss = loss_fcn(batch_pred, batch_labels)
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-
-            iter_tput.append(len(seeds) / (time.time() - tic_step))
-            if step % args.log_every == 0:
-                acc = compute_acc(batch_pred, batch_labels)
-                gpu_mem_alloc = (
-                    th.cuda.max_memory_allocated() / 1000000
-                    if th.cuda.is_available()
-                    else 0
+                # Load the input features as well as output labels
+                batch_inputs, batch_labels = load_subtensor(
+                    nfeat, labels, seeds, input_nodes
                 )
+
+                # Compute loss and prediction
+                batch_pred = model(blocks, batch_inputs)
+                loss = loss_fcn(batch_pred, batch_labels)
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+
+                iter_tput.append(len(seeds) / (time.time() - tic_step))
+                if step % args.log_every == 0 and step != 0:
+                    acc = compute_acc(batch_pred, batch_labels)
+                    print(
+                        "Step {:05d} | Loss {:.4f} | Train Acc {:.4f} | Speed (samples/sec) {:.4f}".format(
+                            step,
+                            loss.item(),
+                            acc.item(),
+                            np.mean(iter_tput[3:]),
+                        )
+                    )
+
+            toc = time.time()
+            print("Epoch Time(s): {:.4f}".format(toc - tic))
+            avg += toc - tic
+            if epoch % args.eval_every == 0 and epoch != 0:
+                eval_acc, test_acc, pred = evaluate(
+                    model, g, nfeat, labels, val_nid, test_nid, device
+                )
+                if args.save_pred:
+                    np.savetxt(
+                        args.save_pred + "%02d" % epoch,
+                        pred.argmax(1).cpu().numpy(),
+                        "%d",
+                    )
+                print("Eval Acc {:.4f}".format(eval_acc))
+                if eval_acc > best_eval_acc:
+                    best_eval_acc = eval_acc
+                    best_test_acc = test_acc
                 print(
-                    "Step {:05d} | Loss {:.4f} | Train Acc {:.4f} | Speed (samples/sec) {:.4f} | GPU {:.1f} MB".format(
-                        step,
-                        loss.item(),
-                        acc.item(),
-                        np.mean(iter_tput[3:]),
-                        gpu_mem_alloc,
+                    "Best Eval Acc {:.4f} Test Acc {:.4f}".format(
+                        best_eval_acc, best_test_acc
                     )
                 )
 
-        toc = time.time()
-        print("Epoch Time(s): {:.4f}".format(toc - tic))
-        
+    print("Avg epoch time: {}".format(avg / args.num_epochs))
     return best_test_acc
 
 
@@ -232,7 +251,12 @@ if __name__ == "__main__":
     argparser.add_argument("--eval-every", type=int, default=1)
     argparser.add_argument("--lr", type=float, default=0.003)
     argparser.add_argument("--dropout", type=float, default=0.5)
-    argparser.add_argument("--dataset", type=str, default="ogbn-products", choices= ["ogbn-papers100M", "ogbn-products"])
+    argparser.add_argument(
+        "--dataset",
+        type=str,
+        default="ogbn-products",
+        choices=["ogbn-papers100M", "ogbn-products"],
+    )
     argparser.add_argument(
         "--num-workers",
         type=int,
@@ -274,5 +298,5 @@ if __name__ == "__main__":
         graph,
     )
 
-    train(args, device, data)
-        
+    test_acc = train(args, device, data).cpu().numpy()
+    print("Test accuracy:", test_acc)
