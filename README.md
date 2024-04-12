@@ -15,14 +15,14 @@ This README includes how to:
 2. [Run the example code](#2-running-the-example-GNN-program)
 3. [Modify your own GNN program to enable ARGO.](#3-enabling-ARGO-on-your-own-GNN-program)
 
-Here we use the Deep Graph Library (DGL) as an example (ARGO is also available on the offical [DGL repo](https://github.com/dmlc/dgl/tree/master/examples/pytorch/argo)!)
+Here we use the Deep Graph Library (DGL) as an example (also available on the offical [DGL repo](https://github.com/dmlc/dgl/tree/master/examples/pytorch/argo))
 ARGO is also compatible with PyTorch-Geometric (PyG); please see the [PyG folder](https://github.com/jasonlin316/ARGO/tree/main/PyG) for details.
 
 ## 1. Setting up the environment
 
-0. Install PyTorch and [DGL](https://www.dgl.ai/pages/start.html)
+Preliminary: Have [PyTorch](https://pytorch.org) and [DGL](https://www.dgl.ai/pages/start.html) installed.
 
-1. Clone the repository:
+1. Clone this repository:
 
    ```shell
    git clone https://github.com/jasonlin316/ARGO.git
@@ -30,17 +30,18 @@ ARGO is also compatible with PyTorch-Geometric (PyG); please see the [PyG folder
 
 2. ARGO utilizes the scikit-optimize library for auto-tuning. Please install scikit-optimize to run ARGO:
 
-```shell
-conda install -c conda-forge "scikit-optimize>=0.9.0"
-```
+   ```shell
+   conda install -c conda-forge "scikit-optimize>=0.9.0"
+   ```
 
-or
+   or
 
-```shell
-pip install scikit-optimize>=0.9
-```
+   ```shell
+   pip install scikit-optimize>=0.9
+   ```
 
 3. Download the OGB datasets (optional if you are not running any)
+
    ```shell
    python ogb_example.py --dataset <ogb_dataset>
    ```
