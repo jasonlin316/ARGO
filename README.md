@@ -16,7 +16,7 @@ This README includes how to:
 3. [Modify your own GNN program to enable ARGO.](#3-enabling-ARGO-on-your-own-GNN-program)
 
 Here we use the Deep Graph Library (DGL) as an example (ARGO is also available on the offical [DGL repo](https://github.com/dmlc/dgl/tree/master/examples/pytorch/argo)!)
-ARGO is also compatible with PyTorch-Geometric (PyG); please see the PyG folder for details.
+ARGO is also compatible with PyTorch-Geometric (PyG); please see the [PyG folder](https://github.com/jasonlin316/ARGO/tree/main/PyG) for details.
 
 ## 1. Setting up the environment
 
