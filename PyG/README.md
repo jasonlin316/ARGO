@@ -1,6 +1,7 @@
-# ARGO for PyTorch-Geometric
+# ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor (PyG)
 
-DGL and PyG can both use ARGO, but their setup is slightly different.
+Official implementation of "ARGO: An Auto-Tuning Runtime System for Scalable GNN Training on Multi-Core Processor," from IEEE International Parallel and
+Distributed Processing Symposium (IPDPS), 2024.
 
 This README includes how to:
 
@@ -10,42 +11,29 @@ This README includes how to:
 
 ## 1. Setting up the environment
 
-> The steps in bold are different from the DGL steps.
+Preliminary: Have [PyTorch](https://pytorch.org) and [PyG](https://www.dgl.ai/pages/start.html) installed.
 
-1. Clone the repository:
+1. Clone this repository:
 
    ```shell
    git clone https://github.com/jasonlin316/ARGO.git
    cd ARGO
    ```
+> our enviroment setup can be accessed via ```environment.yml```
 
-   Note: Anonymous GitHub does not support ```git clone```, sorry for the inconvenience. 
-
-2. Download Anaconda and install
-
-   ```shell
-   wget https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh
-   bash Anaconda3-2023.03-Linux-x86_64.sh
-   ```
-
-3. **Create a virtual environment called GNN:**
+2. ARGO utilizes the scikit-optimize library for auto-tuning. Please install scikit-optimize to run ARGO:
 
    ```shell
-   conda env create -f PyG/environment.yml
+   conda install -c conda-forge "scikit-optimize>=0.9.0"
    ```
 
-4. **Active the virtual environment:**
+   or
 
    ```shell
-   conda activate GNN
+   pip install scikit-optimize>=0.9
    ```
 
-5. Note: there exists a bug in the older version (before v0.9.0) of the Scikit-Optimization library. 
-   To fix the bug, find the "transformer.py" which should be located in  
-   ```~/anaconda3/envs/py38/lib/python3.8/site-packages/skopt/space/transformers.py```  
-   Once open the file, replace all ```np.int``` with ```int```.
-
-6. Download the OGB datasets (optional if you are not running any)
+3. Download the OGB datasets (optional if you are not running any)
 
    ```shell
    python ogb_example.py --dataset <ogb_dataset>
